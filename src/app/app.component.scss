@@ -1,0 +1,16 @@
+// Import theming functions
+@import '~@angular/material/theming';
+// Import your custom theme
+@import 'src/styles/themes/michael-theme';
+
+.mat-drawer {
+    background-color: mat-color($candy-app-primary, 800);
+    border-right: 2px solid mat-color($candy-app-accent);
+    color: mat-color($candy-app-primary, 50);
+}
+
+.content {
+    background-color: mat-color($candy-app-primary, 900);
+    color: mat-color($candy-app-primary, 50);
+    overflow: auto;
+}

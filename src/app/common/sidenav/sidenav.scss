@@ -1,5 +1,34 @@
+// Import theming functions
+@import '~@angular/material/theming';
+// Import your custom theme
+@import 'src/styles/themes/michael-theme';
+
 mat-sidenav {
     &.sidenav {
+        padding: 10px;
+        text-align: center;
         width: 25%;
+
+        .name {
+            font-size: 40px;
+        }
+
+        .logo {
+            $logo-size: 160px;
+            background: mat-color($candy-app-accent);
+            border-radius: 50%;
+            box-shadow: 1px 1px 10px mat-color($candy-app-primary, 900);
+            color: mat-color($candy-app-primary, 50);
+            display: flex;
+            font-size: $logo-size / 2;
+            height: $logo-size;
+            justify-content: center;
+            margin: 6% auto 4% auto;
+            width: $logo-size;
+
+            .inner {
+                align-self: center;
+            }
+        }
     }
 }

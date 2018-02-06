@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import './common';
+
+// Theming
+@import '~@angular/material/theming';
+@import './themes/michael-theme';
+
+// Variables
+$hero-height: 20%;
+
+html,
+body,
+.mat-drawer-container {
+    display: block;
+    font-size: 100%;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: block;
+    height: $hero-height;
+    min-height: 400px;
+    padding: 2%;
+    position: relative;
+    width: 100%;
+}

@@ -30,5 +30,13 @@ mat-sidenav {
                 align-self: center;
             }
         }
+
+        .social-icons {
+            font-size: 20px;
+
+            .icon {
+                padding: 0 1%;
+            }
+        }
     }
 }

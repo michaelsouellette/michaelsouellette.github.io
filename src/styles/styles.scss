@@ -21,6 +21,10 @@ body,
     width: 100%;
 }
 
+a {
+    color: mat-color($candy-app-primary, 50);
+}
+
 .hero-image {
     background-position: center;
     background-repeat: no-repeat;

@@ -5,7 +5,7 @@
             <michael-sidenav></michael-sidenav>
         </mat-sidenav>
 
-        <div class="content padding">
+        <div class="content">
             <div class="hero-image" [ngStyle]="{backgroundImage: 'url(./assets/heros/hero1.jpg)'}">
             </div>
             <div style="text-align:center">
@@ -20,18 +20,24 @@
                     <img width="100" alt="Firebase Logo" src="./assets/badges/firebase.svg">
                 </div>
             </div>
-            <h2>Here are some links to help you start: </h2>
-            <ul>
-                <li>
-                    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-                </li>
-                <li>
-                    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-                </li>
-                <li>
-                    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-                </li>
-            </ul>
+            <div class="padding">
+                <h2>Portfolio</h2>
+                <portfolio-component></portfolio-component>
+            </div>
+            <div class="padding">
+                <h2>Here are some links to help you start: </h2>
+                <ul>
+                    <li>
+                        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+                    </li>
+                    <li>
+                        <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+                    </li>
+                    <li>
+                        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+                    </li>
+                </ul>
+            </div>
         </div>
     </mat-sidenav-container>
 </ng-container>

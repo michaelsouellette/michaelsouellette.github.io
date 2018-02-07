@@ -37,6 +37,7 @@ mat-sidenav {
 
             .icon {
                 padding: 0 1%;
+                transition: $link-transition;
 
                 &:hover {
                     color: mat-color($candy-app-accent);

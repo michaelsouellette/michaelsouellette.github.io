@@ -1,7 +1,6 @@
-// Import theming functions
 @import '~@angular/material/theming';
-// Import your custom theme
 @import '~styles/themes/michael-theme';
+@import '~styles/variables';
 
 mat-sidenav {
     &.sidenav {

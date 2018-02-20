@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { WordpressService } from '../../services/wordpress';
 
 /**
  * @title sidenav
@@ -10,4 +11,19 @@ import { Component, ViewEncapsulation } from '@angular/core';
       encapsulation: ViewEncapsulation.None,
       preserveWhitespaces: false,
 })
-export class PortfolioComponent { }
+export class PortfolioComponent implements OnInit {
+      data = {};
+      flexWidth = "30%";
+      cardCount = Array.from(Array(5),(x,i)=>i);
+
+      constructor(private wordpress: WordpressService) {
+
+      }
+
+      ngOnInit(): void {
+            this.wordpress.get('wp/v2/pages').then(data => {
+                  console.log(data);
+                  this.data = data;
+            });
+      }
+}

@@ -13,23 +13,29 @@ import { MichaelSidenav } from './common/sidenav';
 import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
 
+// Services
+import { WordpressService } from './services/wordpress';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MichaelSidenav,
-    PortfolioComponent,
-    SkillsComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FlexLayoutModule,
-    AngularFontAwesomeModule,
-    MaterialModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+      declarations: [
+            AppComponent,
+            MichaelSidenav,
+            PortfolioComponent,
+            SkillsComponent
+      ],
+      imports: [
+            BrowserModule,
+            BrowserAnimationsModule,
+            HttpClientModule,
+            FlexLayoutModule,
+            AngularFontAwesomeModule,
+            MaterialModule
+      ],
+      providers: [
+            WordpressService
+      ],
+      bootstrap: [
+            AppComponent
+      ]
 })
 export class AppModule { }

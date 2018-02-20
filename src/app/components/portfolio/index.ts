@@ -12,18 +12,17 @@ import { WordpressService } from '../../services/wordpress';
       preserveWhitespaces: false,
 })
 export class PortfolioComponent implements OnInit {
-      data = {};
+      portfolioData = {};
       flexWidth = "30%";
-      cardCount = Array.from(Array(5),(x,i)=>i);
 
       constructor(private wordpress: WordpressService) {
 
       }
 
       ngOnInit(): void {
-            this.wordpress.get('wp/v2/pages').then(data => {
+            this.wordpress.get('wp/v2/portfolio').then(data => {
                   console.log(data);
-                  this.data = data;
+                  this.portfolioData = data;
             });
       }
 }

@@ -62,6 +62,7 @@
 }
 
 #group1 {
+    box-shadow: $title-shadow;
     z-index: 5; /* slide over group 2 */
 }
 #group1 .parallax__layer--base {

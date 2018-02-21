@@ -1,23 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ng-container>
-    <mat-sidenav-container>
-        <mat-sidenav mode="side" opened="true" class="sidenav">
-            <michael-sidenav></michael-sidenav>
-        </mat-sidenav>
-
-        <div class="content">
-            <div class="hero-image" [ngStyle]="{backgroundImage: 'url(./assets/heros/hero1.jpg)'}">
+    <div class="parallax">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <main-component></main-component>
             </div>
-            <skills-component></skills-component>
-            <div class="padding">
-                <h2>Portfolio</h2>
-                <portfolio-component></portfolio-component>
-            </div>
-            <mat-toolbar color="primary">
-                <mat-toolbar-row>
-                    <span><fa name="copyright"></fa> 2018 - Designed and developed by Me</span>
-                </mat-toolbar-row>
-            </mat-toolbar>
+            <div class="parallax__layer parallax__layer--back tall-padding"></div>
         </div>
-    </mat-sidenav-container>
+        <div id="group2" class="parallax__group">
+            <div class="parallax__layer parallax__layer--back">
+                <mat-sidenav-container>
+                    <mat-sidenav mode="side" opened="true" class="sidenav">
+                        <michael-sidenav></michael-sidenav>
+                    </mat-sidenav>
+
+                    <div class="content">
+                        <!-- <div class="hero-image" [ngStyle]="{backgroundImage: 'url(./assets/heros/hero1.jpg)'}">
+                        </div> -->
+                        <skills-component></skills-component>
+                        <div class="padding">
+                            <h2>Portfolio</h2>
+                            <portfolio-component></portfolio-component>
+                        </div>
+                        <mat-toolbar color="primary">
+                            <mat-toolbar-row>
+                                <span><fa name="copyright"></fa> 2018 - Designed and developed by Me</span>
+                            </mat-toolbar-row>
+                        </mat-toolbar>
+                    </div>
+                </mat-sidenav-container>
+            </div>
+        </div>
+    </div>
 </ng-container>

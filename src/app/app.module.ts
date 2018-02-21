@@ -6,10 +6,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MaterialModule } from './material.module';
 
+// Common
 import { AppComponent } from './app.component';
 import { MichaelSidenav } from './common/sidenav';
 
 // Components
+import { MainComponent } from './components/main';
 import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
 
@@ -20,6 +22,7 @@ import { WordpressService } from './services/wordpress';
       declarations: [
             AppComponent,
             MichaelSidenav,
+            MainComponent,
             PortfolioComponent,
             SkillsComponent
       ],

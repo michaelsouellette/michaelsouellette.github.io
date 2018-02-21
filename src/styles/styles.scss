@@ -6,8 +6,6 @@
 @import '~@angular/material/theming';
 @import '~styles/themes/michael-theme';
 
-
-
 html,
 body,
 .mat-drawer-container {
@@ -37,4 +35,23 @@ a {
     padding: 2%;
     position: relative;
     width: 100%;
+}
+
+.logo {
+    $logo-size: 160px;
+    background: mat-color($candy-app-accent);
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px mat-color($candy-app-primary, 900);
+    color: mat-color($candy-app-primary, 50);
+    display: flex;
+    font-size: $logo-size / 2.2;
+    height: $logo-size;
+    justify-content: center;
+    margin: 6% auto 4% auto;
+    width: $logo-size;
+
+    .inner {
+        align-self: center;
+        // text-shadow: 0px 1px 4px mat-color($candy-app-primary, 700);
+    }
 }

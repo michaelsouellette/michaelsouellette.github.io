@@ -26,6 +26,7 @@
     }
 
     .parallax__group {
+        box-shadow: $title-shadow;
         position: relative;
         height: 500px; /* fallback for older browsers */
         height: 100vh;
@@ -62,16 +63,23 @@
 }
 
 #group1 {
-    box-shadow: $title-shadow;
     z-index: 5; /* slide over group 2 */
-}
-#group1 .parallax__layer--base {
-    background: rgba(100, 100, 100, 1);
 }
 
 #group2 {
-    z-index: 3; /* slide under groups 1 and 3 */
+    background: mat-color($candy-app-primary);
+    z-index: 4;
 }
-#group2 .parallax__layer--back {
-    background: rgba(mat-color($candy-app-primary), .6);
+
+#group3 {
+    background: mat-color($candy-app-primary, 50);
+    z-index: 3;
+}
+
+#group4 {
+    z-index: 2;
+}
+
+#group5 {
+    z-index: 1;
 }

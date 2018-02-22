@@ -1,35 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ng-container>
-    <div class="parallax">
+    <div class="content parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
                 <main-component></main-component>
             </div>
-            <!-- <div class="parallax__layer parallax__layer--back tall-padding"></div> -->
+            <div class="parallax__layer parallax__layer--back"></div>
         </div>
         <div id="group2" class="parallax__group">
-            <div class="parallax__layer parallax__layer--back">
-                <mat-sidenav-container>
-                    <mat-sidenav mode="side" opened="true" class="sidenav">
-                        <michael-sidenav></michael-sidenav>
-                    </mat-sidenav>
-
-                    <div class="content">
-                        <!-- <div class="hero-image" [ngStyle]="{backgroundImage: 'url(./assets/heros/hero1.jpg)'}">
-                        </div> -->
-                        <skills-component></skills-component>
-                        <div class="padding">
-                            <h2>Portfolio</h2>
-                            <portfolio-component></portfolio-component>
-                        </div>
-                        <mat-toolbar color="primary">
-                            <mat-toolbar-row>
-                                <span><fa name="copyright"></fa> 2018 - Designed and developed by Me</span>
-                            </mat-toolbar-row>
-                        </mat-toolbar>
-                    </div>
-                </mat-sidenav-container>
+            <div class="parallax__layer parallax__layer--fore">
+                <skills-component></skills-component>
+            </div>
+        </div>
+        <div id="group3" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <portfolio-component></portfolio-component>
             </div>
         </div>
     </div>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span><fa name="copyright"></fa> 2018 - Designed and developed by Me</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </ng-container>

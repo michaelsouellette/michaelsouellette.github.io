@@ -13,6 +13,7 @@ main-component {
     justify-content: center;
     position: relative;
     width: 100%;
+    z-index: 9000;
 
     .content {
         align-self: center;
@@ -59,10 +60,12 @@ main-component {
             h2 {
                 color: mat-color($candy-app-accent);
                 font-weight: normal;
+                margin-left: 2px;
             }
 
             h3 {
                 font-weight: 300;
+                margin-left: 4px;
             }
         }
 

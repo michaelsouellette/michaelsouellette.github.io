@@ -1,8 +1,10 @@
 <h2>Portfolio</h2>
-<div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between stretch" *ngIf="portfolioData">
-    <div class="project" fxFlex="{{ flexWidth }}" *ngFor="let card of portfolioData">
-        <span class="title" [innerHtml]="card.title?.rendered"></span>
-        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+<ngx-slick class="project-box" *ngIf="portfolioData" [config]="slideConfig">
+    <div ngxSlickItem class="project" *ngFor="let card of portfolioData">
+        <div class="portfolio-details">
+            <img class="website-logo" [src]="card.image.url" *ngIf="card.image" [alt]="card.image.alt">
+            <p class="title" [innerHtml]="card.title?.rendered"></p>
+        </div>
         <div class="content" [innerHtml]="card.content?.rendered"></div>
     </div>
-</div>
+</ngx-slick>

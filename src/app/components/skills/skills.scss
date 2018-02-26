@@ -4,4 +4,8 @@
 
 skills-component {
     background: mat-color($candy-app-primary);
+
+    h2 {
+        font-size: $secondary-header-size;
+    }
 }

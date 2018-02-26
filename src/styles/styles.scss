@@ -22,6 +22,10 @@ body,
 
 a {
     color: mat-color($candy-app-primary, 50);
+
+    &:hover {
+        color: mat-color($candy-app-accent);
+    }
 }
 
 .hero-image {

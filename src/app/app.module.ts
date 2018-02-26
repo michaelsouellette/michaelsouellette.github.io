@@ -6,6 +6,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MaterialModule } from './material.module';
 
+// Libraries
+import { SlickModule } from 'ngx-slick';
+
 // Common
 import { AppComponent } from './app.component';
 import { MichaelSidenav } from './common/sidenav';
@@ -32,7 +35,8 @@ import { WordpressService } from './services/wordpress';
             HttpClientModule,
             FlexLayoutModule,
             AngularFontAwesomeModule,
-            MaterialModule
+            MaterialModule,
+            SlickModule.forRoot()
       ],
       providers: [
             WordpressService

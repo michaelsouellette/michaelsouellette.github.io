@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { MichaelSidenav } from './common/sidenav';
 
 // Components
+import { ContactComponent } from './components/contact';
 import { MainComponent } from './components/main';
 import { PortfolioComponent } from './components/portfolio';
 import { SkillsComponent } from './components/skills';
@@ -25,6 +26,7 @@ import { WordpressService } from './services/wordpress';
       declarations: [
             AppComponent,
             MichaelSidenav,
+            ContactComponent,
             MainComponent,
             PortfolioComponent,
             SkillsComponent

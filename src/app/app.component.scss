@@ -27,9 +27,9 @@
 
     .parallax__group {
         box-shadow: $title-shadow;
-        position: relative;
         height: 500px; /* fallback for older browsers */
         height: 100vh;
+        position: relative;
         transform-style: preserve-3d;
     }
 

@@ -1,0 +1,17 @@
+// Style Sheet Imports
+@import "src/styles/palette";
+
+// Font Imports
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+// Fonts
+$primary-font: 'Ubuntu', sans-serif;
+
+// Main Colors
+$primary-color: $red;
+$primary-font-color: $grey-dark;
+
+// Navigation Colors
+$nav-color-background: $primary-color;
+$nav-color-font: $off-white;
+

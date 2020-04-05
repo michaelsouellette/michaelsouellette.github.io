@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+:host {
+	background: $nav-color-background;
+	color: $nav-color-font;
+	display: block;
+	margin: 0;
+	padding: 1rem;
+	position: sticky;
+	width: 100%;
+}

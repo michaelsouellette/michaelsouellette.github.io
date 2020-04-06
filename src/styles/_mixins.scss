@@ -1,0 +1,25 @@
+@mixin section-styles {
+	display: block;
+	margin: 0 auto;
+	padding: $section-padding;
+	padding-top: 0;
+	position: relative;
+	width: $section-width;
+
+	@media ($mobile) {
+		width: 95%;
+	}
+}
+
+@mixin section-after {
+	:host {
+		&::after {
+			border-bottom: $section-border;
+			content: '';
+			display: block;
+			margin: 0 auto;
+			padding: 1.5rem 0;
+			width: 30%;
+		}
+	}
+}

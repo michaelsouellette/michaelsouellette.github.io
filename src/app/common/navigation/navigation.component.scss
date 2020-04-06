@@ -1,0 +1,35 @@
+@import "src/styles/variables";
+
+$navigation-padding: 1.5rem;
+
+:host {
+	background: $nav-color-background;
+	box-shadow: 1px 1px 4px $grey-dark;
+	color: $nav-color-font;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+	padding: $navigation-padding 0 0;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+
+	a {
+		border-bottom: 3px solid $nav-color-background;
+		color: $nav-color-font;
+		display: inline-block;
+		font-size: $nav-size-font;
+		margin: 0 2rem;
+		padding: 0 0 $navigation-padding;
+		text-decoration: none;
+		text-transform:  uppercase;
+		transition: 0.25s linear;
+
+		&:hover {
+			border-bottom: 3px solid $nav-color-font-hover;
+			color: $nav-color-font-hover;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+:host {
+	@include section-styles;
+}
+
+.language {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+
+	&__item {
+		box-sizing: border-box;
+		margin-bottom: 2.5rem;
+		padding: 0 1rem;
+		text-align: center;
+		width: 16%;
+
+		@media ($mobile) {
+			width: 25%;
+		}
+
+		img {
+			margin-bottom: .75rem;
+		}
+
+		span {
+			font-size: 1rem;
+			font-weight: 600;
+		}
+	}
+}
+
+@include section-after;

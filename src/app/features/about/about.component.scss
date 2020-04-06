@@ -1,0 +1,9 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+:host {
+	@include section-styles;
+	padding-top: $section-padding-vertical;
+}
+
+@include section-after;

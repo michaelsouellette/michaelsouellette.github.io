@@ -5,8 +5,34 @@
 	display: block;
 	margin: 0 auto;
 	padding: $section-padding;
+	padding-top: 0;
 	position: relative;
 	width: $section-width;
+}
+
+.language {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+
+	&__item {
+		box-sizing: border-box;
+		margin-bottom: 2.5rem;
+		padding: 0 1rem;
+		text-align: center;
+		width: 16%;
+
+		img {
+			margin-bottom: .75rem;
+		}
+
+		span {
+			font-size: 1rem;
+			font-weight: 600;
+		}
+	}
 }
 
 @include section-after;

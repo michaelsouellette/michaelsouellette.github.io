@@ -1,0 +1,27 @@
+// Style Sheet Imports
+@import "src/styles/palette";
+
+// Font Imports
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+// Fonts
+$primary-font: 'Ubuntu', sans-serif;
+
+// Main Colors
+$primary-color: $red;
+$primary-font-color: $grey-dark;
+
+// Navigation Colors
+$nav-color-background: $primary-color;
+$nav-color-font: $off-white;
+$nav-color-font-hover: $grey-light;
+$nav-size-font: 1.25rem;
+
+// Home Colors
+$home-color-background: $grey-light2;
+$home-color-font: $off-white;
+
+// Section Variables
+$section-border: 2px solid $grey-light;
+$section-padding: 3rem 0;
+$section-width: 60%;

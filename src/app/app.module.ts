@@ -1,50 +1,47 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { MaterialModule } from './material.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
-// Libraries
-import { SlickModule } from 'ngx-slick';
-
-// Common
+// App Component
 import { AppComponent } from './app.component';
-import { MichaelSidenav } from './common/sidenav';
 
-// Components
-import { ContactComponent } from './components/contact';
-import { MainComponent } from './components/main';
-import { PortfolioComponent } from './components/portfolio';
-import { SkillsComponent } from './components/skills';
+// Modules
+import { NavigationModule } from './common/navigation/navigation.module';
+import { AboutModule } from './features/about/about.module';
+import { HomeModule } from './features/home/home.module';
+import { SkillsModule } from './features/skills/skills.module';
 
-// Services
-import { WordpressService } from './services/wordpress';
+const APP_PROVIDERS = [
+];
+
+const APP_ROUTES: Routes = [
+	// { path: '404', component: NoContentComponent },
+	// { path: '**', component: NoContentComponent },
+	{ path: '', component: AppComponent }
+];
 
 @NgModule({
-      declarations: [
-            AppComponent,
-            MichaelSidenav,
-            ContactComponent,
-            MainComponent,
-            PortfolioComponent,
-            SkillsComponent
-      ],
-      imports: [
-            BrowserModule,
-            BrowserAnimationsModule,
-            HttpClientModule,
-            FlexLayoutModule,
-            AngularFontAwesomeModule,
-            MaterialModule,
-            SlickModule.forRoot()
-      ],
-      providers: [
-            WordpressService
-      ],
-      bootstrap: [
-            AppComponent
-      ]
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		RouterModule.forRoot(APP_ROUTES, {
+			useHash: Boolean(history.pushState) === false,
+			initialNavigation: 'enabled',
+			onSameUrlNavigation: 'ignore',
+			enableTracing: false
+		}),
+		NavigationModule,
+		AboutModule,
+		HomeModule,
+		SkillsModule
+	],
+	providers: [
+		APP_PROVIDERS
+	],
+	bootstrap: [
+		AppComponent
+	]
 })
 export class AppModule { }

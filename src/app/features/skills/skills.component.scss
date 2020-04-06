@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+:host {
+	display: block;
+	margin: 0 auto;
+	padding: $section-padding;
+	position: relative;
+	width: $section-width;
+}
+
+@include section-after;

@@ -1,0 +1,6 @@
+{
+	"html.format.wrapAttributes": "force",
+	"html.format.endWithNewline": true,
+	"stylelint.enable": true,
+	"stylelint.autoFixOnSave": true
+}

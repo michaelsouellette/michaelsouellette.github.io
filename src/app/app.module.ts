@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 // Modules
 import { NavigationModule } from './common/navigation/navigation.module';
+import { AboutModule } from './features/about/about.module';
 import { HomeModule } from './features/home/home.module';
 
 const APP_PROVIDERS = [
@@ -14,7 +15,8 @@ const APP_PROVIDERS = [
 
 const APP_ROUTES: Routes = [
 	// { path: '404', component: NoContentComponent },
-	// { path: '**', component: NoContentComponent }
+	// { path: '**', component: NoContentComponent },
+	{ path: '', component: AppComponent }
 ];
 
 @NgModule({
@@ -30,6 +32,7 @@ const APP_ROUTES: Routes = [
 			enableTracing: false
 		}),
 		NavigationModule,
+		AboutModule,
 		HomeModule
 	],
 	providers: [

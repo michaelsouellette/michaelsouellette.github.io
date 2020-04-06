@@ -6,6 +6,24 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+	public NAVIGATION = [
+		{
+			title: 'About',
+			link: ''
+		},
+		{
+			title: 'Skills',
+			link: ''
+		},
+		{
+			title: 'Résumé',
+			link: ''
+		},
+		{
+			title: 'Contact',
+			link: ''
+		},
+	];
 
 	constructor() { }
 

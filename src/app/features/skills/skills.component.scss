@@ -2,12 +2,7 @@
 @import 'src/styles/mixins';
 
 :host {
-	display: block;
-	margin: 0 auto;
-	padding: $section-padding;
-	padding-top: 0;
-	position: relative;
-	width: $section-width;
+	@include section-styles;
 }
 
 .language {
@@ -23,6 +18,10 @@
 		padding: 0 1rem;
 		text-align: center;
 		width: 16%;
+
+		@media ($mobile) {
+			width: 25%;
+		}
 
 		img {
 			margin-bottom: .75rem;

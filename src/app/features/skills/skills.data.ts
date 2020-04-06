@@ -24,7 +24,7 @@ export class SkillsInfo {
 		this.skills.push(new ISkill('Gulp', 'gulp-plain.svg'));
 	}
 
-	public getSkillsInfo() {
+	public getInfo() {
 		return this.skills;
 	}
-};
+}

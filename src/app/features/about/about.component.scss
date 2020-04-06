@@ -2,11 +2,8 @@
 @import 'src/styles/mixins';
 
 :host {
-	display: block;
-	margin: 0 auto;
-	padding: $section-padding;
-	position: relative;
-	width: $section-width;
+	@include section-styles;
+	padding-top: $section-padding-vertical;
 }
 
 @include section-after;

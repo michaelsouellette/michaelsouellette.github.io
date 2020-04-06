@@ -7,7 +7,9 @@ import { ISkill } from './skills.model';
 	selector: 'app-skills',
 	templateUrl: './skills.component.html',
 	styleUrls: ['./skills.component.scss'],
-	providers: [SkillsInfo]
+	providers: [
+		SkillsInfo
+	]
 })
 export class SkillsComponent implements OnInit {
 	public skills: ISkill[];
@@ -17,7 +19,7 @@ export class SkillsComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-		this.skills = this.skillsInfo.getSkillsInfo();
+		this.skills = this.skillsInfo.getInfo();
 	}
 
 }

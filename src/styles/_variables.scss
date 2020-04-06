@@ -7,6 +7,16 @@
 // Fonts
 $primary-font: 'Ubuntu', sans-serif;
 
+// Media Queries
+$desktop-xlarge: 'min-width: 2000px';
+$app-max: 'min-width: 1680px';
+$desktop-large: 'min-width: 1280px';
+$desktop-1200: 'min-width: 1200px';
+$desktop-md: 'min-width:992px';
+$desktop: 'min-width: 767px';
+$mobile: 'max-width: 766px';
+$xs: 'max-width: 576px';
+
 // Main Colors
 $primary-color: $red;
 $primary-font-color: $grey-dark;
@@ -23,7 +33,8 @@ $home-color-font: $off-white;
 
 // Section Variables
 $section-border: 2px solid $grey-light;
-$section-padding: 3rem 0;
+$section-padding-vertical: 3rem;
+$section-padding: $section-padding-vertical 0;
 $section-width: 60%;
 
 // Footer Variables

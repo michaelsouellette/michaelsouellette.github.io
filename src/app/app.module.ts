@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { FooterModule } from './common/footer/footer.module';
 import { NavigationModule } from './common/navigation/navigation.module';
 import { AboutModule } from './features/about/about.module';
+import { ContactModule } from './features/contact/contact.module';
 import { HomeModule } from './features/home/home.module';
+import { ResumeModule } from './features/resume/resume.module';
 import { SkillsModule } from './features/skills/skills.module';
 
 const APP_PROVIDERS = [
@@ -36,7 +38,9 @@ const APP_ROUTES: Routes = [
 		FooterModule,
 		NavigationModule,
 		AboutModule,
+		ContactModule,
 		HomeModule,
+		ResumeModule,
 		SkillsModule
 	],
 	providers: [

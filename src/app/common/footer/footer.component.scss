@@ -1,0 +1,16 @@
+@import "src/styles/variables";
+
+:host {
+	background: $footer-color-background;
+	color: $footer-color-font;
+	display: block;
+	padding: 1.5rem 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}

@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 // Modules
+import { FooterModule } from './common/footer/footer.module';
 import { NavigationModule } from './common/navigation/navigation.module';
 import { AboutModule } from './features/about/about.module';
 import { HomeModule } from './features/home/home.module';
@@ -32,6 +33,7 @@ const APP_ROUTES: Routes = [
 			onSameUrlNavigation: 'ignore',
 			enableTracing: false
 		}),
+		FooterModule,
 		NavigationModule,
 		AboutModule,
 		HomeModule,

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavigationModule } from './common/navigation/navigation.module';
 import { AboutModule } from './features/about/about.module';
 import { HomeModule } from './features/home/home.module';
+import { SkillsModule } from './features/skills/skills.module';
 
 const APP_PROVIDERS = [
 ];
@@ -33,7 +34,8 @@ const APP_ROUTES: Routes = [
 		}),
 		NavigationModule,
 		AboutModule,
-		HomeModule
+		HomeModule,
+		SkillsModule
 	],
 	providers: [
 		APP_PROVIDERS

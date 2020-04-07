@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 // Components
+import { PositionComponent } from './components/position/position.component';
 import { ResumeComponent } from './resume.component';
 
 @NgModule({
@@ -9,7 +10,8 @@ import { ResumeComponent } from './resume.component';
 		CommonModule
 	],
 	declarations: [
-		ResumeComponent
+		ResumeComponent,
+		PositionComponent
 	],
 	exports: [
 		ResumeComponent

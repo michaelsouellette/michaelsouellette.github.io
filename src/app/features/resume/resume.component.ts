@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { IPosition } from './components/position/position.model';
 import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
-import { IEducation, IJob } from './resume.model';
 
 @Component({
 	selector: 'app-resume',
@@ -14,9 +14,9 @@ import { IEducation, IJob } from './resume.model';
 	]
 })
 export class ResumeComponent implements OnInit {
-	public freelanceExperience: IJob[] ;
-	public professionalExperience: IJob[];
-	public education: IEducation[];
+	public freelanceExperience: IPosition[] ;
+	public professionalExperience: IPosition[];
+	public education: IPosition[];
 
 	constructor(
 		private educationInfo: EducationInfo,

@@ -1,0 +1,48 @@
+@import 'src/styles/variables';
+
+:host {
+	display: block;
+	padding-bottom: 2rem;
+	position: relative;
+}
+
+.row {
+	&__first {
+		color: $resume-color-row1;
+		display: flex;
+		flex-direction: row;
+		font-size: $resume-size-font-row1;
+		font-weight: $resume-weight-font-row1;
+		justify-content: space-between;
+		margin-bottom: .25rem;
+
+		h5,
+		p {
+			font-size: $resume-size-font-row1;
+			margin: 0;
+			padding: 0;
+			text-transform: capitalize;
+
+			a {
+				color: $resume-color-row1;
+				text-decoration: none;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+	&__second {
+		color: $resume-color-row2;
+		font-size: $resume-size-font-row2;
+		font-weight: $resume-weight-font-row2;
+	}
+
+	&__third {
+		color: $resume-color-row3;
+		font-size: $resume-size-font-row3;
+		font-weight: $resume-weight-font-row3;
+	}
+}

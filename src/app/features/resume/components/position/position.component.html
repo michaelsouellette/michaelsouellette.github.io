@@ -1,0 +1,15 @@
+<div class="row__first">
+	<ng-container *ngIf="data.companyLink">
+		<h5><a [href]="data.companyLink" target="_blank">{{ data.company }}</a></h5>
+	</ng-container>
+	<ng-container *ngIf="!data.companyLink">
+		<h5>{{ data.company }}</h5>
+	</ng-container>
+	<p><span>{{ data.startDate }}</span> - <span>{{ data.endDate }}</span></p>
+</div>
+<div class="row__second" *ngIf="data.position">
+	<span>{{ data.position }}</span>
+</div>
+<div class="row__third" *ngIf="data.description">
+	<p>{{ data.description }}</p>
+</div>

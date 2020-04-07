@@ -27,15 +27,26 @@ $nav-color-font: $off-white;
 $nav-color-font-hover: $grey-light;
 $nav-size-font: 1.25rem;
 
-// Home Colors
-$home-color-background: $grey-light2;
-$home-color-font: $off-white;
-
 // Section Variables
 $section-border: 2px solid $grey-light;
 $section-padding-vertical: 3rem;
 $section-padding: $section-padding-vertical 0;
 $section-width: 60%;
+
+// Home Colors
+$home-color-background: $grey-light2;
+$home-color-font: $off-white;
+
+// Resume
+$resume-color-row1: $grey-light2;
+$resume-color-row2: $grey-light;
+$resume-color-row3: $grey-dark;
+$resume-size-font-row1: 1.2rem;
+$resume-weight-font-row1: 700;
+$resume-size-font-row2: 1.1rem;
+$resume-weight-font-row2: 400;
+$resume-size-font-row3:1rem;
+$resume-weight-font-row3: 500;
 
 // Footer Variables
 $footer-color-background: $grey-light3;

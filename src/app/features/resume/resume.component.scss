@@ -3,6 +3,11 @@
 
 :host {
 	@include section-styles;
+
+	h4 {
+		border-bottom: 1px solid $primary-color;
+		font-size: 1.3rem;
+	}
 }
 
 @include section-after;

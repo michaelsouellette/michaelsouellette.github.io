@@ -17,6 +17,9 @@ $desktop: 'min-width: 767px';
 $mobile: 'max-width: 766px';
 $xs: 'max-width: 576px';
 
+// Transitions
+$primary-transition: 0.25s linear;
+
 // Main Colors
 $primary-color: $red;
 $primary-font-color: $grey-dark;
@@ -36,8 +39,11 @@ $section-width: 60%;
 // Home Colors
 $home-color-background: $grey-light2;
 $home-color-font: $off-white;
+$home-color-icon-hover: $primary-color;
 
 // Resume
+$resume-color-font: $grey-dark;
+$resume-color-font-hover: $primary-color;
 $resume-color-row1: $grey-light2;
 $resume-color-row2: $grey-light;
 $resume-color-row3: $grey-dark;

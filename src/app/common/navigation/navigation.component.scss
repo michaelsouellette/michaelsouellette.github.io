@@ -25,7 +25,7 @@ $navigation-padding: 1.5rem;
 		padding: 0 0 $navigation-padding;
 		text-decoration: none;
 		text-transform:  uppercase;
-		transition: 0.25s linear;
+		transition: $primary-transition;
 
 		&:hover {
 			border-bottom: 3px solid $nav-color-font-hover;

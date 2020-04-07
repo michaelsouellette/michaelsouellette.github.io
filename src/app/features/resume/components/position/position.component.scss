@@ -26,6 +26,7 @@
 			a {
 				color: $resume-color-row1;
 				text-decoration: none;
+				transition: $primary-transition;
 
 				&:hover {
 					color: $primary-color;

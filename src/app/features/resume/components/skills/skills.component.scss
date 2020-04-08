@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+h4 {
+	margin-top: 0;
+}
+
+.skills {
+	&__stars {
+		i {
+			color: $primary-color;
+		}
+	}
+}

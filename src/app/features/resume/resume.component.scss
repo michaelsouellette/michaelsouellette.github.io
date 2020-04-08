@@ -4,36 +4,27 @@
 :host {
 	@include section-styles;
 
-	h4 {
-		border-bottom: 1px solid $primary-color;
-		font-size: 1.3rem;
+	&::ng-deep {
+		h4 {
+			border-bottom: 1px solid $primary-color;
+			font-size: 1.3rem;
+		}
 	}
 
-	.details {
+	.resume {
+		display: flex;
+		flex-direction: row;
 
-
-		a {
-			color: $resume-color-font;
-			transition: $primary-transition;
-
-			&:hover {
-				color: $resume-color-font-hover;
-			}
+		&__left {
+			flex: 2;
 		}
 
-		.mdi {
-			display: inline-block;
-			width: 1.8rem;
-		}
-
-		&__lineItem {
-			display: flex;
-			flex-direction: row;
-			position: relative;
-
-			& > * {
-				align-self: center;
-			}
+		&__right {
+			border-left: 1px solid $grey-light3;
+			box-sizing: border-box;
+			flex: .5;
+			margin-left: 2rem;
+			padding-left: 2rem;
 		}
 	}
 }

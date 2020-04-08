@@ -1,4 +1,4 @@
-import { IPosition } from './components/position/position.model';
+import { IPosition } from '../position/position.model';
 
 export class EducationInfo {
 	public education: IPosition[] = [];

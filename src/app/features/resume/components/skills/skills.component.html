@@ -1,0 +1,9 @@
+<h4>Skills</h4>
+<div class="skills">
+	<div *ngFor="let item of skillsData; last as isLast" class="skills__item">
+		<p>{{ item.name }}</p>
+		<div class="skills__stars">
+			<i class="mdi mdi-star" *ngFor="let i of counter(item.stars)"></i>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<section class="details">
+		<p class="details__lineItem"><i class="mdi mdi-briefcase"></i><span>Software Engineering Manager</span></p>
+		<p class="details__lineItem"><i class="mdi mdi-email"></i><a href="mailto:michaelsouellette@gmail.com">michaelsouellette@gmail.com</a></p>
+		<p class="details__lineItem"><i class="mdi mdi-web"></i><a href="/">http://www.michaelouellette.com</a></p>
+		<p class="details__lineItem"><i class="mdi mdi-home"></i><span>Pittsburgh, PA</span></p>
+		<p>Experienced Software Engineer with a demonstrated history of web applications. Skilled in Angular, Node.js, SASS, HTML, Firebase, PHP, Web Design, and Adobe Photoshop. Strong engineering professional with a Bachelor of Science (B.S.) focused in Business Management and Management Information Systems from Penn State Erie, The Behrend College.</p>
+	</section>
+	<section>
+		<h4>Professional Experience</h4>
+		<app-position *ngFor="let item of professionalExperience" [data]="item"></app-position>
+	</section>
+	<section>
+		<h4>Freelance Experience</h4>
+		<app-position *ngFor="let item of freelanceExperience" [data]="item"></app-position>
+	</section>
+	<section>
+		<h4>Education</h4>
+		<app-position *ngFor="let item of education" [data]="item"></app-position>
+	</section>

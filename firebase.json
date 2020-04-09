@@ -3,7 +3,7 @@
 		{
 			"target": "production",
 			"site": "michaelouellette-198615",
-			"public": "dist/michaelouellette",
+			"public": "dist",
 			"ignore": [
 				"firebase.json",
 				"**/.*",
@@ -19,7 +19,7 @@
 		{
 			"target": "staging",
 			"site": "beta-michaelouellette",
-			"public": "dist/michaelouellette",
+			"public": "dist",
 			"ignore": [
 				"firebase.json",
 				"**/.*",

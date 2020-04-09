@@ -9,19 +9,19 @@ export class NavigationComponent implements OnInit {
 	public NAVIGATION = [
 		{
 			title: 'About',
-			link: ''
+			link: '#about'
 		},
 		{
 			title: 'Skills',
-			link: ''
+			link: '#skills'
 		},
 		{
 			title: 'Résumé',
-			link: ''
+			link: '#resume'
 		},
 		{
 			title: 'Contact',
-			link: ''
+			link: '#contact'
 		},
 	];
 

@@ -18,6 +18,12 @@
 	text-align: center;
 	width: 100%;
 
+	img {
+		@media ($mobile) {
+			width: 12rem;
+		}
+	}
+
 	h1 {
 		font-weight: 300;
     	text-transform: uppercase;

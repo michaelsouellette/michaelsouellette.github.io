@@ -16,6 +16,10 @@
 		justify-content: space-between;
 		margin-bottom: .25rem;
 
+		@media ($mobile) {
+			display: block;
+		}
+
 		h5,
 		p {
 			font-size: $resume-size-font-row1;
@@ -33,17 +37,31 @@
 				}
 			}
 		}
+
+		@media ($mobile) {
+			p {
+				font-size: $resume-size-font-row1 * .75;
+			}
+		}
 	}
 
 	&__second {
 		color: $resume-color-row2;
 		font-size: $resume-size-font-row2;
 		font-weight: $resume-weight-font-row2;
+
+		@media ($mobile) {
+			font-size: $resume-size-font-row2 * .8;
+		}
 	}
 
 	&__third {
 		color: $resume-color-row3;
 		font-size: $resume-size-font-row3;
 		font-weight: $resume-weight-font-row3;
+
+		@media ($mobile) {
+			font-size: $resume-size-font-row3 * .8;
+		}
 	}
 }

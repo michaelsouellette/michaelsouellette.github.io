@@ -15,6 +15,7 @@ export class ResumeSkills {
 		this.skills.push(new IResumeSkills('Redis', 4));
 		this.skills.push(new IResumeSkills('SQL', 4));
 		this.skills.push(new IResumeSkills('NoSQL', 4));
+		this.skills.push(new IResumeSkills('Firebase', 3.5));
 		this.skills.push(new IResumeSkills('NPM', 4));
 		this.skills.push(new IResumeSkills('Bootstrap', 4.5));
 		this.skills.push(new IResumeSkills('Webpack', 3.5));

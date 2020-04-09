@@ -3,7 +3,11 @@
 	<div *ngFor="let item of skillsData; last as isLast" class="skills__item">
 		<p>{{ item.name }}</p>
 		<div class="skills__stars">
-			<i class="mdi mdi-star" *ngFor="let i of counter(item.stars)"></i>
+			<ng-container *ngFor="let starItem of [1, 2, 3, 4, 5]">
+				<i class="mdi mdi-star" *ngIf="starItem <= item.stars"></i>
+				<i class="mdi mdi-star-half-full" *ngIf="!isDecimal(item.stars) && starItem > item.stars && starItem !== mathCeiling(item.stars + 1)"></i>
+				<i class="mdi mdi-star-outline" *ngIf="starItem > item.stars && starItem > mathCeiling(item.stars)"></i>
+			</ng-container>
 		</div>
 	</div>
 </div>

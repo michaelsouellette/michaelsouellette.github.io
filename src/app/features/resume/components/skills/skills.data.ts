@@ -29,7 +29,7 @@ export class ResumeSkills {
 		this.skills.push(new IResumeSkills('Azure', 3.5));
 		this.skills.push(new IResumeSkills('Jira', 4));
 		this.skills.push(new IResumeSkills('XML', 4));
-		this.skills.push(new IResumeSkills('IBM WebSphere Commerce', 3));
+		this.skills.push(new IResumeSkills('IBM WebSphere Commerce', 4));
 		this.skills.push(new IResumeSkills('NetSuite', 3));
 		this.skills.push(new IResumeSkills('Sketch', 3));
 		this.skills.push(new IResumeSkills('PhotoShop', 2));
@@ -38,4 +38,4 @@ export class ResumeSkills {
 	public getInfo() {
 		return this.skills;
 	}
-}
+};

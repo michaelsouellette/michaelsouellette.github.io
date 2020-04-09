@@ -20,8 +20,11 @@ export class SkillsComponent implements OnInit {
 		this.skillsData = this.resumeSkills.getInfo();
 	}
 
-	public counter(i: number) {
-		const returnable = Array(i).fill(0).map((x, i) => i);
-		return returnable;
+	public isDecimal(i: number) {
+		return Math.floor(i) === i;
+	}
+
+	public mathCeiling(i: number) {
+		return Math.ceil(i);
 	}
 }

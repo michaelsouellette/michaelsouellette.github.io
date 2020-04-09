@@ -1,0 +1,36 @@
+{
+  "hosting": [
+		{
+			"target": "production",
+			"site": "michaelouellette-198615",
+			"public": "dist/michaelouellette",
+			"ignore": [
+				"firebase.json",
+				"**/.*",
+				"**/node_modules/**"
+			],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/index.html"
+				}
+			]
+		},
+		{
+			"target": "staging",
+			"site": "beta-michaelouellette",
+			"public": "dist/michaelouellette",
+			"ignore": [
+				"firebase.json",
+				"**/.*",
+				"**/node_modules/**"
+			],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/index.html"
+				}
+			]
+		}
+	]
+}

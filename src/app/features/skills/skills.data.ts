@@ -11,7 +11,7 @@ export class SkillsInfo {
 		this.skills.push(new ISkill('Sass', 'sass-original.svg'));
 		this.skills.push(new ISkill('TypeScript', 'typescript-plain.svg'));
 		this.skills.push(new ISkill('Javascript', 'javascript-plain.svg'));
-		this.skills.push(new ISkill('GIT', 'git-plain.svg'));
+		this.skills.push(new ISkill('git', 'git-plain.svg'));
 		this.skills.push(new ISkill('Redis', 'redis-plain.svg'));
 		this.skills.push(new ISkill('MySQL', 'mysql-plain.svg'));
 		this.skills.push(new ISkill('MongoDB', 'mongodb-plain.svg'));

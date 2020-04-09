@@ -16,6 +16,10 @@ $navigation-padding: 1.5rem;
 	width: 100%;
 	z-index: 5;
 
+	@media ($mobile) {
+		justify-content: space-around;
+	}
+
 	a {
 		border-bottom: 3px solid $nav-color-background;
 		color: $nav-color-font;
@@ -26,6 +30,11 @@ $navigation-padding: 1.5rem;
 		text-decoration: none;
 		text-transform:  uppercase;
 		transition: $primary-transition;
+
+		@media ($mobile) {
+			font-size: 3.6vw;
+			margin: auto;
+		}
 
 		&:hover {
 			border-bottom: 3px solid $nav-color-font-hover;

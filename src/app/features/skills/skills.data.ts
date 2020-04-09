@@ -15,13 +15,13 @@ export class SkillsInfo {
 		this.skills.push(new ISkill('Redis', 'redis-plain.svg'));
 		this.skills.push(new ISkill('MySQL', 'mysql-plain.svg'));
 		this.skills.push(new ISkill('MongoDB', 'mongodb-plain.svg'));
+		this.skills.push(new ISkill('Firebase', 'firebase.svg'));
 		this.skills.push(new ISkill('NPM', 'npm-original-wordmark.svg'));
 		this.skills.push(new ISkill('Webpack', 'webpack-plain.svg'));
 		this.skills.push(new ISkill('Wordpress', 'wordpress-plain.svg'));
 		this.skills.push(new ISkill('Bootstrap', 'bootstrap-plain.svg'));
 		this.skills.push(new ISkill('Python', 'python-plain.svg'));
 		this.skills.push(new ISkill('PHP', 'php-plain.svg'));
-		this.skills.push(new ISkill('Gulp', 'gulp-plain.svg'));
 	}
 
 	public getInfo() {

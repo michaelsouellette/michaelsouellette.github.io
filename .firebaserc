@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "michaelouellette-198615"
+  },
+  "targets": {
+    "michaelouellette-198615": {
+      "hosting": {
+        "staging": [
+          "beta-michaelouellette"
+        ],
+        "production": [
+          "michaelouellette-198615"
+        ]
+      }
+    }
+  }
+}

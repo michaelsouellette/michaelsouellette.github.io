@@ -3,6 +3,47 @@
 
 :host {
 	@include section-styles;
+
+	&::ng-deep {
+		h4 {
+			border-bottom: 1px solid $primary-color;
+			font-size: 1.3rem;
+
+			@media ($mobile) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.resume {
+		display: flex;
+		flex-direction: row;
+
+		&__left {
+			flex: 2;
+
+			@media ($mobile) {
+				flex: 1.5;
+				max-width: 65%;
+			}
+		}
+
+		&__right {
+			$right-spacing: 2rem;
+			border-left: 1px solid $grey-light3;
+			box-sizing: border-box;
+			flex: .5;
+			margin-left: $right-spacing;
+			padding-left: $right-spacing;
+
+			@media ($mobile) {
+				$division-multiplier: 3;
+				flex: 1;
+				margin-left: $right-spacing / $division-multiplier;
+				padding-left: $right-spacing / $division-multiplier;
+			}
+		}
+	}
 }
 
 @include section-after;

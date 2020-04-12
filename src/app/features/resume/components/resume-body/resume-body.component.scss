@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+.details {
+	a {
+		color: $resume-color-font;
+		transition: $primary-transition;
+
+		&:hover {
+			color: $resume-color-font-hover;
+		}
+	}
+
+	.mdi {
+		display: inline-block;
+		width: 1.8rem;
+	}
+
+	&__lineItem {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+
+		& > * {
+			align-self: center;
+		}
+	}
+}

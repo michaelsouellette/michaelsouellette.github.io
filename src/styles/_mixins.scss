@@ -7,6 +7,7 @@
 	width: $section-width;
 
 	@media ($mobile) {
+		padding:  $section-padding-vertical / 2.75 0;
 		width: 95%;
 	}
 }
@@ -20,6 +21,10 @@
 			margin: 0 auto;
 			padding: 1.5rem 0;
 			width: 30%;
+
+			@media ($mobile) {
+				padding:  $section-padding-vertical / 2.75 0;
+			}
 		}
 	}
 }

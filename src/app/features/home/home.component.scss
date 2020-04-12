@@ -14,9 +14,14 @@
 }
 
 .home-component {
-	padding-top: 3rem;
+	$home-padding: 3rem;
+	padding-top: $home-padding;
 	text-align: center;
 	width: 100%;
+
+	@media ($mobile) {
+		padding-bottom: $home-padding;
+	}
 
 	img {
 		@media ($mobile) {

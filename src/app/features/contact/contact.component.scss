@@ -23,6 +23,13 @@
 			transition: $primary-transition;
 			width: $size;
 
+			@media ($mobile) {
+				$size: 70px;
+				font-size: 2.5rem;
+				height: $size;
+				width: $size;
+			}
+
 			&:hover {
 				background: $contact-color-icon-background-hover;
 			}

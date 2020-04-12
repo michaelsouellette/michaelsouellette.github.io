@@ -6,7 +6,7 @@
     "michaelouellette-198615": {
       "hosting": {
         "staging": [
-          "beta-michaelouellette"
+          "michaelouellette-beta"
         ],
         "production": [
           "michaelouellette-198615"

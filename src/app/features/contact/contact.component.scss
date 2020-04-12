@@ -3,12 +3,12 @@
 
 :host {
 	@include section-styles;
-	padding-bottom: $section-padding-vertical;
 
 	.contact {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		padding-bottom: $section-padding-vertical / 2;
 
 		&__icon {
 			$size: 5rem;

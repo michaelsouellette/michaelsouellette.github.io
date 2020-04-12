@@ -3,4 +3,29 @@
 
 :host {
 	@include section-styles;
+
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		&__icon {
+			$size: 5rem;
+			align-items: center;
+			background: $contact-color-icon-background;
+			border-radius: 50%;
+			color: $contact-color-icon;
+			display: flex;
+			font-size: 3rem;
+			height: $size;
+			justify-content: center;
+			margin: 0 2rem;
+			transition: $primary-transition;
+			width: $size;
+
+			&:hover {
+				background: $contact-color-icon-background-hover;
+			}
+		}
+	}
 }

@@ -1,0 +1,16 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+:host {
+	@include section-styles;
+	flex: 1;
+
+	a {
+		color: $not-color-link;
+		transition: $primary-transition;
+
+		&:hover {
+			color: $not-color-link-hover;
+		}
+	}
+}

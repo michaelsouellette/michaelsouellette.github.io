@@ -8,15 +8,20 @@
 	background-size: cover;;
 	color: $home-color-font;
 	display: block;
-	height: 100%;
+	height: 100vh;
 	position: relative;
 	width: 100%;
 }
 
 .home-component {
-	padding-top: 3rem;
+	$home-padding: 3rem;
+	padding: $home-padding 0;
 	text-align: center;
 	width: 100%;
+
+	@media ($mobile) {
+		padding-bottom: $home-padding;
+	}
 
 	img {
 		@media ($mobile) {

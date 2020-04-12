@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // App Component
 import { AppComponent } from './app.component';
+import { NoContentComponent } from './no-content/no-content.component';
 
 // Modules
 import { FooterModule } from './common/footer/footer.module';
@@ -13,19 +14,21 @@ import { ContactModule } from './features/contact/contact.module';
 import { HomeModule } from './features/home/home.module';
 import { ResumeModule } from './features/resume/resume.module';
 import { SkillsModule } from './features/skills/skills.module';
+import { MainComponent } from './main/main.component';
 
 const APP_PROVIDERS = [
 ];
 
 const APP_ROUTES: Routes = [
-	// { path: '404', component: NoContentComponent },
-	// { path: '**', component: NoContentComponent },
-	{ path: '', component: AppComponent }
+	{ path: '', component: MainComponent },
+	{ path: '**', component: NoContentComponent }
 ];
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		MainComponent,
+		NoContentComponent
 	],
 	imports: [
 		BrowserModule,
@@ -43,9 +46,7 @@ const APP_ROUTES: Routes = [
 		ResumeModule,
 		SkillsModule
 	],
-	providers: [
-		APP_PROVIDERS
-	],
+	providers: APP_PROVIDERS,
 	bootstrap: [
 		AppComponent
 	]

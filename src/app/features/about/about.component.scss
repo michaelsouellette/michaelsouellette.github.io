@@ -4,6 +4,46 @@
 :host {
 	@include section-styles;
 	padding-top: $section-padding-vertical;
+
+	.about {
+		display: flex;
+		flex-direction: row;
+
+		@media ($mobile) {
+			flex-direction: column;
+		}
+
+		&__left {
+			box-sizing: border-box;
+			display: inline-block;
+			flex: 1;
+			padding-right: 2rem;
+			position: relative;
+
+			@media ($mobile) {
+				padding: 0;
+			}
+
+			img {
+				border: $picture-border;
+				border-radius: $picture-radius;
+				display: block;
+				max-width: 100%;
+
+				@media ($mobile) {
+					margin: 0 auto;
+					max-width: 60%;
+				}
+			}
+		}
+
+		&__right {
+			align-self: center;
+			display: inline-block;
+			flex: 3;
+			position: relative;
+		}
+	}
 }
 
 @include section-after;

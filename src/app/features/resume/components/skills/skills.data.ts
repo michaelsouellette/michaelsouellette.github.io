@@ -6,6 +6,9 @@ export class ResumeSkills {
 	constructor() {
 		this.skills.push(new IResumeSkills('Angular', 5));
 		this.skills.push(new IResumeSkills('Node.js', 4.5));
+		this.skills.push(new IResumeSkills('Express', 4));
+		this.skills.push(new IResumeSkills('MEAN', 4));
+		this.skills.push(new IResumeSkills('M*EAN', 4));
 		this.skills.push(new IResumeSkills('HTML 5', 5));
 		this.skills.push(new IResumeSkills('CSS 3', 5));
 		this.skills.push(new IResumeSkills('Sass', 5));

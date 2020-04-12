@@ -3,6 +3,8 @@
 
 html,
 body {
+	background-color: $background-color;
+	color: $primary-font-color;
 	font-family: $primary-font;
 	height: 100%;
 	margin: 0;

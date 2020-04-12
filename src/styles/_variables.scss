@@ -21,6 +21,7 @@ $xs: 'max-width: 576px';
 $primary-transition: 0.25s linear;
 
 // Main Colors
+$background-color: $off-white;
 $primary-color: $red;
 $primary-font-color: $grey-dark;
 
@@ -40,6 +41,10 @@ $section-width: 60%;
 $home-color-background: $grey-light2;
 $home-color-font: $off-white;
 $home-color-icon-hover: $primary-color;
+
+// About Colors
+$picture-border: 1px solid $grey-light2;
+$picture-radius: 6px;
 
 // Resume
 $resume-color-font: $grey-dark;

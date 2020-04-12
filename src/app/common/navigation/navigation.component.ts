@@ -12,8 +12,8 @@ export class NavigationComponent implements OnInit {
 			link: '#about'
 		},
 		{
-			title: 'Skills',
-			link: '#skills'
+			title: 'Tech',
+			link: '#tech'
 		},
 		{
 			title: 'Résumé',

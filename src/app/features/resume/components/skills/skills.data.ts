@@ -42,4 +42,4 @@ export class ResumeSkills {
 	public getInfo() {
 		return this.skills;
 	}
-};
+}

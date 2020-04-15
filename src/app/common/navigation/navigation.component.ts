@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit {
 		{
 			title: 'Contact',
 			link: '#contact'
-		},
+		}
 	];
 
 	constructor() { }

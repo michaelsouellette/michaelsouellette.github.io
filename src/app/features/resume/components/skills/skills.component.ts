@@ -13,7 +13,7 @@ export class SkillsComponent implements OnInit {
 	public skillsData: IResumeSkills[] ;
 
 	constructor(
-		private resumeSkills: ResumeSkills,
+		private resumeSkills: ResumeSkills
 	) { }
 
 	ngOnInit(): void {

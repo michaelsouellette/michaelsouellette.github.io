@@ -148,6 +148,7 @@
 		"no-commented-code": { "severity": "warning" },
 		"cognitive-complexity": [true, 20],
 		"parameters-max-number": [true, 13],
+		"max-line-length": [false],
 		"max-classes-per-file": [true, 5]
 	}
 }

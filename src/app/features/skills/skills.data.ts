@@ -1,5 +1,7 @@
 import { ISkill } from './skills.model';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class SkillsInfo {
 	public skills: ISkill[] = [];
 

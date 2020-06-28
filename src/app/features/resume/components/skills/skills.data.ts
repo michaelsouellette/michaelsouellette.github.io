@@ -1,5 +1,7 @@
 import { IResumeSkills } from './skills.model';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class ResumeSkills {
 	public skills: IResumeSkills[] = [];
 

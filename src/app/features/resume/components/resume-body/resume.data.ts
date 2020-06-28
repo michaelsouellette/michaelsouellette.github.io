@@ -1,5 +1,7 @@
 import { IPosition } from '../position/position.model';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class EducationInfo {
 	public education: IPosition[] = [];
 
@@ -23,6 +25,7 @@ export class EducationInfo {
 	}
 }
 
+@Injectable()
 export class FreelanceInfo {
 	public jobs: IPosition[] = [];
 	private jobTitle = 'Freelance Web Developer';
@@ -73,6 +76,7 @@ export class FreelanceInfo {
 	}
 }
 
+@Injectable()
 export class ProfessionalInfo {
 	public jobs: IPosition[] = [];
 

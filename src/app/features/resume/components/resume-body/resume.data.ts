@@ -1,5 +1,5 @@
 import { IPosition } from '../position/position.model';
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class EducationInfo {

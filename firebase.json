@@ -19,7 +19,7 @@
 		  {
 			  "target": "staging",
 			  "site": "michaelouellette-beta",
-			  "public": "dist/app",
+			  "public": "app",
 			  "ignore": [
 				  "firebase.json",
 				  "**/.*",

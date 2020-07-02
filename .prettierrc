@@ -2,8 +2,8 @@
 	"arrowParens": "always",
 	"bracketSpacing": true,
 	"jsxBracketSameLine": true,
+	"printWidth": 150,
 	"tabWidth": 4,
-	"printWidth": 300,
 	"useTabs": true,
 	"trailingComma": "none",
 	"semi": true,
@@ -15,9 +15,9 @@
 		{
 			"files": "*.yml",
 			"options": {
-				"tabWidth": 2,
-				"useTabs": false
-			}
+			"tabWidth": 2,
+			"useTabs": false
 		}
-	]
+	}
+]
 }

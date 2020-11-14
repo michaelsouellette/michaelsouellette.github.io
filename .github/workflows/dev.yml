@@ -1,3 +1,5 @@
+# @format
+
 name: Build and Deploy Dev
 on:
   push:

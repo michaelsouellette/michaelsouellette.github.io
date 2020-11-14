@@ -33,11 +33,12 @@ const APP_ROUTES: Routes = [
 	imports: [
 		BrowserModule,
 		RouterModule.forRoot(APP_ROUTES, {
-			useHash: Boolean(history.pushState) === false,
-			initialNavigation: 'enabled',
-			onSameUrlNavigation: 'ignore',
-			enableTracing: false
-		}),
+    useHash: Boolean(history.pushState) === false,
+    initialNavigation: 'enabled',
+    onSameUrlNavigation: 'ignore',
+    enableTracing: false,
+    relativeLinkResolution: 'legacy'
+}),
 		FooterModule,
 		NavigationModule,
 		AboutModule,

@@ -34,8 +34,7 @@ jobs:
         with:
           name: dist
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting:staging
+        uses: chrissank/deploy-firebase-functions@1.0.0
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+         TARGET: michaelouellette-beta

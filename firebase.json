@@ -1,37 +1,26 @@
 {
 	"hosting": [
-		  {
-			  "target": "production",
-			  "site": "michaelouellette-198615",
-			  "public": "app",
-			  "ignore": [
-				  "firebase.json",
-				  "**/.*",
-				  "**/node_modules/**"
-			  ],
-			  "rewrites": [
-				  {
-					  "source": "**",
-					  "destination": "/index.html"
-				  }
-			  ]
-		  },
-		  {
-			  "target": "staging",
-			  "site": "michaelouellette-beta",
-			  "public": "app",
-			  "ignore": [
-				  "firebase.json",
-				  "**/.*",
-				  "**/node_modules/**"
-			  ],
-			  "rewrites": [
-				  {
-					  "source": "**",
-					  "destination": "/index.html"
-				  }
-			  ]
-		  }
-	  ]
-  }
-
+		{
+			"site": "michaelouellette-198615",
+			"public": "app",
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/index.html"
+				}
+			]
+		},
+		{
+			"site": "michaelouellette-beta",
+			"public": "app",
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/index.html"
+				}
+			]
+		}
+	]
+}

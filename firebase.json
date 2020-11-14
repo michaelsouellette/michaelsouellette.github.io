@@ -1,7 +1,7 @@
 {
 	"hosting": [
 		{
-			"site": "michaelouellette-198615",
+			"target": "production",
 			"public": "app",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
 			"rewrites": [
@@ -12,7 +12,7 @@
 			]
 		},
 		{
-			"site": "michaelouellette-beta",
+			"target": "staging",
 			"public": "app",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
 			"rewrites": [

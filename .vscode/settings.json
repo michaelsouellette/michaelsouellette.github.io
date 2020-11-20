@@ -5,5 +5,9 @@
 	"stylelint.autoFixOnSave": true,
 	"editor.insertSpaces": false,
 	"editor.tabSize": 4,
-	"editor.detectIndentation": false
+	"editor.detectIndentation": false,
+	"appService.zipIgnorePattern": [
+		"node_modules{,/**}",
+		".vscode{,/**}"
+	]
 }

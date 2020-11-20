@@ -31,14 +31,13 @@ const APP_ROUTES: Routes = [
 		NoContentComponent
 	],
 	imports: [
-		BrowserModule,
+		BrowserModule.withServerTransition({ appId: 'serverApp' }),
 		RouterModule.forRoot(APP_ROUTES, {
-    useHash: Boolean(history.pushState) === false,
-    initialNavigation: 'enabled',
-    onSameUrlNavigation: 'ignore',
-    enableTracing: false,
-    relativeLinkResolution: 'legacy'
-}),
+    		initialNavigation: 'enabled',
+    		onSameUrlNavigation: 'ignore',
+    		enableTracing: false,
+    		relativeLinkResolution: 'legacy'
+		}),
 		FooterModule,
 		NavigationModule,
 		AboutModule,

@@ -8,6 +8,11 @@ on:
     branches:
       - dev
 
+env:
+  AZURE_WEBAPP_NAME: michaelouellette-dev'    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: './dist/app'      # set this to the path to your web app project
+  NODE_VERSION: '12.x'                # set this to the node version to use
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +21,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: ${{ env.NODE_VERSION }}
     - name: npm install & build
       run: |
         npm install
@@ -24,8 +29,8 @@ jobs:
     - name: Archive Production Artifact
       uses: actions/upload-artifact@master
       with:
-        name: dist
-        path: dist/app
+        name: dev-michaelouellette
+        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
   deploy:
     name: Deploy
@@ -37,11 +42,10 @@ jobs:
     - name: Download Artifact
       uses: actions/download-artifact@master
       with:
-          name: dist
+          name: dev-michaelouellette
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'michaelouellette-dev'
-        slot-name: 'production'
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ce9c135e56304b31a22e81d3de6b9de1 }}
-        package: .
+        package: '.'

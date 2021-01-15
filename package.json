@@ -4,6 +4,7 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "npm run serve:ssr",
+		"deploy": "ng build --prod && npm run build:ssr && gcloud app deploy",
 		"build": "ng build",
 		"build:production": "npm run build:ssr",
 		"test": "ng test",

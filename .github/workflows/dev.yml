@@ -10,7 +10,7 @@ on:
 
 env:
   ARTIFACT_NAME: 'dev-michaelouellette' # set this to the name you want for the artifact
-  WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
+  WEBAPP_PACKAGE_PATH: './dist/'      # set this to the path to your web app project
   NODE_VERSION: '14.x'                # set this to the node version to use
 
 jobs:
@@ -22,6 +22,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
+    - name: Cache Node Modules
+      uses: actions/cache@v2
+      with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package.lock') }}
     - name: npm install & build
       run: |
         npm install
@@ -37,9 +42,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
           name: ${{ env.ARTIFACT_NAME }}
+      - name: Display structure of downloaded files
+        run: |
+            # Output artifact contents.
+            ls -R

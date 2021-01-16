@@ -1,17 +1,18 @@
 {
 	"name": "app",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"scripts": {
 		"ng": "ng",
 		"start": "npm run serve:ssr",
 		"deploy": "ng build --prod && npm run build:ssr && gcloud app deploy",
 		"build": "ng build",
-		"build:production": "npm run build:ssr",
+		"build:production": "npm run build:ssr && npm run build:copy:files",
+		"build:copy:files": "cp app.yaml dist/app.yaml && cp package.json dist/package.json && cp client-secret.json dist/client-secret.json",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"dev:ssr": "ng run app:serve-ssr",
-		"serve:ssr": "node dist/app/server/main.js",
+		"serve:ssr": "node app/server/main.js",
 		"build:ssr": "ng build --prod && ng run app:server:production",
 		"prerender": "ng run app:prerender"
 	},

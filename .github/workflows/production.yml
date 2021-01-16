@@ -56,9 +56,9 @@ jobs:
         run: |
             # Output artifact contents.
             ls -R
-            echo '\nclient-secret.json:\n'
+            echo 'client-secret.json:'
             cat client-secret.json
-            echo '\napp.yaml:\n'
+            echo 'app.yaml:'
             cat app.yaml
       - name: Publish app to Google App Engine
         run: |

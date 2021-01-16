@@ -12,7 +12,7 @@ updates:
     directory: '/'
     # Check the npm registry for updates weekly, default is Monday
     schedule:
-      interval: 'daily'
+      interval: 'monthly'
     # Allow up to 5 open pull requests for pip dependencies
     open-pull-requests-limit: 1000
     # Specifiy a target branch to create PR for version updates

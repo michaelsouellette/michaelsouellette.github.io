@@ -59,7 +59,7 @@ jobs:
         run: |
             # Output artifact contents.
             ls -R
-            echo 'client-secret.json:'
+            echo '\nclient-secret.json:\n'
             cat client-secret.json
-            echo 'app.yaml:'
+            echo '\napp.yaml:\n'
             cat app.yaml

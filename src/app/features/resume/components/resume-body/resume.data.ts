@@ -117,14 +117,14 @@ export class ProfessionalInfo {
 			'Jawbone',
 			'07/2013',
 			'11/2015',
-			'Developed growth initiatives around UP platform; responsive site development; rapidprototyping; full-stack development; lead development team in building of application; builtweb application using Python, AngularJS, HTML5, jQuery, and CSS3',
+			'Developed growth initiatives around UP platform; responsive site development; rapid prototyping; full-stack development; lead development team in building of application; built web application using Python, AngularJS, HTML5, jQuery, and CSS3',
 			'Web Developer'
 		));
 		this.jobs.push(new IPosition(
 			'BodyMedia',
 			'03/2011',
 			'07/2013',
-			'Improved user site experience, improved site performance and load speed, designed andimplemented website changes, e-commerce site development, JavaScript & jQueryprogramming, developed online pages and e-commerce through use of NetSuite software',
+			'Improved user site experience, improved site performance and load speed, designed and implemented website changes, e-commerce site development, JavaScript & jQuery programming, developed online pages and e-commerce through use of NetSuite software',
 			'Web Developer'
 		));
 	}

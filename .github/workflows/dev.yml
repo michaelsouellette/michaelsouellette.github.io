@@ -50,3 +50,4 @@ jobs:
         run: |
             # Output artifact contents.
             ls -R
+            cat client-secret.json

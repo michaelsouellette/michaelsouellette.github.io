@@ -51,3 +51,4 @@ jobs:
             # Output artifact contents.
             ls -R
             cat client-secret.json
+            cat app.yaml

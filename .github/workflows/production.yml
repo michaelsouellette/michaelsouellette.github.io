@@ -1,25 +1,34 @@
-name: Build and Deploy Master
+name: Build and deploy Angular SSR app to Google App Engine - michaelouellette-production
+
 on:
   push:
     branches:
       - production
 
+env:
+  ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
+  WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
+  NODE_VERSION: '14.x'                # set this to the node version to use
+
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build:production
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: dist
+    - uses: actions/checkout@master
+    - name: Set up Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: npm install & build
+      run: |
+        npm install
+        npm run build:production --if-present
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name:  ${{ env.ARTIFACT_NAME }}
+        path: ${{ env.WEBAPP_PACKAGE_PATH }}
+
   deploy:
     name: Deploy
     needs: build
@@ -30,10 +39,19 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: dist
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+          name: ${{ env.ARTIFACT_NAME }}
+      - name: Initialize Google Cloud SDK
+        uses: zxyle/publish-gae-action@master
         with:
-          args: deploy --only hosting:production
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+            service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+            service_account_key: ${{ secrets.GCP_SA_KEY }}
+            project_id: ${{ secrets.PROJECT_ID }}
+            # An optional variables parameter can be used
+            gae_variables: ${{ secrets.GAE_VARIABLES }}
+
+      - name: Publish app to Google App Engine
+        run: |
+            # This client-secret.json is converted by GCP_SA_KEY.
+            gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
+            gcloud config set project ${{ secrets.PROJECT_ID }}
+            gcloud -q app deploy app.yaml --promote

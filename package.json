@@ -7,7 +7,7 @@
 		"deploy": "ng build --prod && npm run build:ssr && gcloud app deploy",
 		"build": "ng build",
 		"build:production": "npm run build:ssr && npm run build:copy:files",
-		"build:copy:files": "cp package.json dist/package.json && cp client-secret.json dist/client-secret.json",
+		"build:copy:files": "cp app.yaml dist/app.yaml && cp package.json dist/package.json && cp client-secret.json dist/client-secret.json",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",

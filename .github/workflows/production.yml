@@ -12,6 +12,7 @@ env:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -43,10 +44,6 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: ${{ env.ARTIFACT_NAME }}
-      - name: Display structure of downloaded files
-        run: |
-            # Output artifact contents.
-            ls -R
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:
@@ -55,9 +52,17 @@ jobs:
             project_id: ${{ secrets.PROJECT_ID }}
             # An optional variables parameter can be used
             gae_variables: ${{ secrets.GAE_VARIABLES }}
+      - name: Display structure of downloaded files
+        run: |
+            # Output artifact contents.
+            ls -R
+            echo '\nclient-secret.json:\n'
+            cat client-secret.json
+            echo '\napp.yaml:\n'
+            cat app.yaml
       - name: Publish app to Google App Engine
         run: |
             # This client-secret.json is converted by GCP_SA_KEY.
-            gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
+            gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=./client-secret.json
             gcloud config set project ${{ secrets.PROJECT_ID }}
             gcloud -q app deploy app.yaml --promote

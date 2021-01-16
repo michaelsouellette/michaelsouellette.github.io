@@ -10,7 +10,7 @@ on:
 
 env:
   ARTIFACT_NAME: 'dev-michaelouellette' # set this to the name you want for the artifact
-  WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project
+  WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
   NODE_VERSION: '14.x'                # set this to the node version to use
 
 jobs:

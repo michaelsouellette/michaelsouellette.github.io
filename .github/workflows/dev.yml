@@ -1,12 +1,15 @@
-name: Build and deploy Angular SSR app to Google App Engine - michaelouellette-production
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy Angular SSR app to Google App Engine - michaelouellette-dev
 
 on:
   push:
     branches:
-      - production
+      - dev
 
 env:
-  ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
+  ARTIFACT_NAME: 'dev-michaelouellette' # set this to the name you want for the artifact
   WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
   NODE_VERSION: '14.x'                # set this to the node version to use
 
@@ -40,18 +43,3 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: ${{ env.ARTIFACT_NAME }}
-      - name: Initialize Google Cloud SDK
-        uses: zxyle/publish-gae-action@master
-        with:
-            service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-            service_account_key: ${{ secrets.GCP_SA_KEY }}
-            project_id: ${{ secrets.PROJECT_ID }}
-            # An optional variables parameter can be used
-            gae_variables: ${{ secrets.GAE_VARIABLES }}
-
-      - name: Publish app to Google App Engine
-        run: |
-            # This client-secret.json is converted by GCP_SA_KEY.
-            gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
-            gcloud config set project ${{ secrets.PROJECT_ID }}
-            gcloud -q app deploy app.yaml --promote

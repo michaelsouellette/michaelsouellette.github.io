@@ -1,6 +1,6 @@
 <div class="row__first">
 	<ng-container *ngIf="data.companyLink">
-		<h5><a [href]="data.companyLink" target="_blank">{{ data.company }}</a></h5>
+		<h5><a [href]="data.companyLink" target="_blank" rel="noopener">{{ data.company }}</a></h5>
 	</ng-container>
 	<ng-container *ngIf="!data.companyLink">
 		<h5>{{ data.company }}</h5>

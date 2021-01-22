@@ -110,8 +110,7 @@ export class ProfessionalInfo {
 			'12/2015',
 			'02/2018',
 			`Creating interactive wireframes for web apps, using AngularJS, jQuery, HTML5, and Sass to create integrations for interactive digital signage; contributing in the development of a web app style framework for future digital signage development; developing Node.js and AngularJS based mobile applications for wayfinding in relation to digital signage; using WebSocket to create real-time queue management systems; creating interactive puzzles and games using modern web technologies for use on touchscreen displays`,
-			'Front-End Web Developer',
-			'https://www.industryweapon.com/'
+			'Front-End Web Developer'
 		));
 		this.jobs.push(new IPosition(
 			'Jawbone',

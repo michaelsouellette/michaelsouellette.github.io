@@ -85,7 +85,7 @@ export class ProfessionalInfo {
 			`DICK's Sporting Goods`,
 			'10/2019',
 			'Present',
-			'Managing the software engineers for the Customer Engagement and Browse product teams.',
+			'Managing the software engineers for the Athlete Engagement product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; help in the transition of digital asset management (DAM) systems.',
 			'Engineering Manager',
 			'https://www.dickssportinggoods.com/'
 		));
@@ -93,7 +93,7 @@ export class ProfessionalInfo {
 			`DICK's Sporting Goods`,
 			'11/2018',
 			'10/2019',
-			'',
+			'Guided an engineering team in the creation of an in-house marketing content management system (CMS); grew the use of the CMS to the most called API on the site; enabled site content and marketing teams the ability to react quickly to the market place; helped in establishing many guidelines for the growth of Angular applications within the organization; guided the largest sections of marketing content from legacy systems to newer and more scalable approaches.',
 			'Senior Software Engineer',
 			'https://www.dickssportinggoods.com/'
 		));
@@ -101,7 +101,7 @@ export class ProfessionalInfo {
 			`DICK's Sporting Goods`,
 			'02/2018',
 			'11/2018',
-			'',
+			'Lead a team of front-end developers in the creation of marketing assets for the e-commerce storefront; helped in the creation of tools to speed of business processes around site content; managed many large "instantaneous" site content shifts; worked with design teams in creating scalable and reusable content (sans CMS); managed the deprecation of legacy applications into newer processes.',
 			'Senior Front-End Web Developer',
 			'https://www.dickssportinggoods.com/'
 		));

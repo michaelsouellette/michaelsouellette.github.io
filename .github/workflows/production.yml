@@ -1,4 +1,4 @@
-name: Build and deploy Angular SSR app to Google App Engine - michaelouellette-production
+name: Production MichaelOuellette.com
 
 on:
   push:

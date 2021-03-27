@@ -29,7 +29,10 @@
 							"src/sitemap.xml",
 							"src/robots.txt"
 						],
-						"styles": ["src/styles.scss", "./node_modules/@mdi/font/css/materialdesignicons.css"],
+						"styles": [
+							"src/styles.scss",
+							"./node_modules/@mdi/font/css/materialdesignicons.css"
+						],
 						"scripts": []
 					},
 					"configurations": {

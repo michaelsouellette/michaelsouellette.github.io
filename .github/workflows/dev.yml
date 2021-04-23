@@ -35,7 +35,7 @@ jobs:
     - name: Archive Develop Artifact
       uses: actions/upload-artifact@master
       with:
-        name:  ${{ env.ARTIFACT_NAME }}
+        name:  ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
         path: ${{ env.WEBAPP_PACKAGE_PATH }}
 
   deploy:
@@ -44,9 +44,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
+        id: download
         uses: actions/download-artifact@master
         with:
-          name: ${{ env.ARTIFACT_NAME }}
+          name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
+          path: ~/built-artifact
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:
@@ -58,4 +60,5 @@ jobs:
       - name: Display structure of downloaded files
         run: |
             # Output artifact contents.
+            cd ${{steps.download.outputs.download-path}}
             ls -R

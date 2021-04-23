@@ -5,7 +5,7 @@ name: Style Lint Check
 on:
   push:
     branches:
-      - develop
+      - dev
     paths:
       - '*/**.scss'
 

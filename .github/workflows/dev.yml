@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Dev MichaelOuellette.com
+name: Dev - Build and deploy
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
     - name: Archive Develop Artifact
       uses: actions/upload-artifact@master
       with:
-        name:  ${{ env.ARTIFACT_NAME }}
+        name:  ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
         path: ${{ env.WEBAPP_PACKAGE_PATH }}
 
   deploy:
@@ -44,9 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
+        id: download
         uses: actions/download-artifact@master
         with:
-          name: ${{ env.ARTIFACT_NAME }}
+          name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:

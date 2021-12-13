@@ -780,7 +780,7 @@ FreelanceInfo.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__[
 class ProfessionalInfo {
     constructor() {
         this.jobs = [];
-        this.jobs.push(new _position_position_model__WEBPACK_IMPORTED_MODULE_0__.IPosition(`DICK's Sporting Goods`, '10/2019', 'Present', 'Managing the software engineers for the Athlete Engagement product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; help in the transition of digital asset management (DAM) systems.', 'Engineering Manager', 'https://www.dickssportinggoods.com/'));
+        this.jobs.push(new _position_position_model__WEBPACK_IMPORTED_MODULE_0__.IPosition(`DICK's Sporting Goods`, '10/2019', 'Present', 'Managing the software engineers for the ECommerce UI product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; designing architecture around new ecommerce features spanning multiple applications.', 'Engineering Manager', 'https://www.dickssportinggoods.com/'));
         this.jobs.push(new _position_position_model__WEBPACK_IMPORTED_MODULE_0__.IPosition(`DICK's Sporting Goods`, '11/2018', '10/2019', 'Guided an engineering team in the creation of an in-house marketing content management system (CMS); grew the use of the CMS to the most called API on the site; enabled site content and marketing teams the ability to react quickly to the market place; helped in establishing many guidelines for the growth of Angular applications within the organization; guided the largest sections of marketing content from legacy systems to newer and more scalable approaches.', 'Senior Software Engineer', 'https://www.dickssportinggoods.com/'));
         this.jobs.push(new _position_position_model__WEBPACK_IMPORTED_MODULE_0__.IPosition(`DICK's Sporting Goods`, '02/2018', '11/2018', 'Lead a team of front-end developers in the creation of marketing assets for the e-commerce storefront; helped in the creation of tools to speed of business processes around site content; managed many large "instantaneous" site content shifts; worked with design teams in creating scalable and reusable content (sans CMS); managed the deprecation of legacy applications into newer processes.', 'Senior Front-End Web Developer', 'https://www.dickssportinggoods.com/'));
         this.jobs.push(new _position_position_model__WEBPACK_IMPORTED_MODULE_0__.IPosition('Industry Weapon', '12/2015', '02/2018', `Creating interactive wireframes for web apps, using AngularJS, jQuery, HTML5, and Sass to create integrations for interactive digital signage; contributing in the development of a web app style framework for future digital signage development; developing Node.js and AngularJS based mobile applications for wayfinding in relation to digital signage; using WebSocket to create real-time queue management systems; creating interactive puzzles and games using modern web technologies for use on touchscreen displays.`, 'Front-End Web Developer'));
@@ -906,17 +906,19 @@ class ResumeSkills {
         this.skills = [];
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Angular', 5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Node.js', 4.5));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('TypeScript', 4.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Express', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('MEAN', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('M*EAN', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('HTML 5', 5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('CSS 3', 5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Sass', 5));
-        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('TypeScript', 4));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('React', 3));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Javascript', 5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('git', 5));
-        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Redis', 4));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Redis', 4.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('SQL', 4));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('MySQL', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('NoSQL', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Firebase', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('NPM', 4));
@@ -927,14 +929,13 @@ class ResumeSkills {
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('PHP', 3));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Gulp', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('jQuery', 4));
-        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('WordPress', 5));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('WordPress', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Google Cloud', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('AWS', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Azure', 3.5));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Jira', 4));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('XML', 4));
-        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('IBM WebSphere Commerce', 3));
-        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('NetSuite', 3));
+        this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('IBM WebSphere Commerce', 2));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('Sketch', 3));
         this.skills.push(new _skills_model__WEBPACK_IMPORTED_MODULE_0__.IResumeSkills('PhotoShop', 2));
     }

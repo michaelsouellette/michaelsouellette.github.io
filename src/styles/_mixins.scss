@@ -7,7 +7,7 @@
 	width: $section-width;
 
 	@media ($mobile) {
-		padding:  $section-padding-vertical / 2.75 0;
+		padding:  calc($section-padding-vertical / 2.75) 0;
 		width: 95%;
 	}
 }
@@ -23,7 +23,7 @@
 			width: 30%;
 
 			@media ($mobile) {
-				padding:  $section-padding-vertical / 2.75 0;
+				padding:  calc($section-padding-vertical / 2.75) 0;
 			}
 		}
 	}

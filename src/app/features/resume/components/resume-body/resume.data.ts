@@ -85,7 +85,7 @@ export class ProfessionalInfo {
 			`DICK's Sporting Goods`,
 			'10/2019',
 			'Present',
-			'Managing the software engineers for the Athlete Engagement product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; help in the transition of digital asset management (DAM) systems.',
+			'Managing the software engineers for the ECommerce UI product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; designing architecture around new ecommerce features spanning multiple applications.',
 			'Engineering Manager',
 			'https://www.dickssportinggoods.com/'
 		));

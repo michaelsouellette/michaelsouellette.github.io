@@ -7,7 +7,7 @@
     "deploy": "ng build --configuration production && npm run build:ssr && gcloud app deploy",
     "build": "ng build",
     "build:production": "npm run build:ssr && npm run build:copy:files",
-    "build:copy:files": "cp app.yaml dist/app.yaml && cp package.json dist/package.json && cp .gcloudignore dist/.gcloudignore",
+	"build:render": "ng build && ng run app:server && npx angular-prerender && cp CNAME dist/app/browser/CNAME",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

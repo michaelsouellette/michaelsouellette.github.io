@@ -11,7 +11,7 @@ on:
 env:
   ARTIFACT_NAME: 'dev-michaelouellette' # set this to the name you want for the artifact
   WEBAPP_PACKAGE_PATH: './dist/'      # set this to the path to your web app project
-  NODE_VERSION: '14.x'                # set this to the node version to use
+  NODE_VERSION: '14.15.x'                # set this to the node version to use
 
 jobs:
   build:
@@ -24,14 +24,20 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Cache Node Modules
+      id: npm-cache
       uses: actions/cache@v2
       with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/package.lock') }}
-    - name: npm install & build
+        path: "**/node_modules"
+        key: mononode-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+    - name: NPM Install
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
+    - name: Build App
       run: |
-        npm install
-        npm run build:production --if-present
+        npm install -g @angular/cli
+        ng build
+        ng run app:server
+        npx angular-prerender
     - name: Archive Develop Artifact
       uses: actions/upload-artifact@master
       with:

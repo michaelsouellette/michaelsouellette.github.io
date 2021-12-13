@@ -29,6 +29,7 @@ jobs:
       run: |
         npm install
         npm run build:production --if-present
+        ng build && ng run app:server && npx angular-prerender
     - name: Archive Production Artifact
       uses: actions/upload-artifact@master
       with:

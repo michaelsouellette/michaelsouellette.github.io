@@ -39,8 +39,8 @@
 			@media ($mobile) {
 				$division-multiplier: 3;
 				flex: 1;
-				margin-left: $right-spacing / $division-multiplier;
-				padding-left: $right-spacing / $division-multiplier;
+				margin-left: calc($right-spacing / $division-multiplier);
+				padding-left: calc($right-spacing / $division-multiplier);
 			}
 		}
 	}

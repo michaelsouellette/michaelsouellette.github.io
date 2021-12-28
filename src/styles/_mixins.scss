@@ -1,3 +1,5 @@
+@use 'src/styles/variables' as *;
+
 @mixin section-styles {
 	display: block;
 	margin: 0 auto;

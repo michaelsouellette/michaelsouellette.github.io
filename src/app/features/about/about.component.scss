@@ -1,8 +1,8 @@
-@import 'src/styles/variables';
-@import 'src/styles/mixins';
+@use 'src/styles/variables' as *;
+@use 'src/styles/mixins';
 
 :host {
-	@include section-styles;
+	@include mixins.section-styles;
 	padding-top: $section-padding-vertical;
 
 	.about {
@@ -46,4 +46,4 @@
 	}
 }
 
-@include section-after;
+@include mixins.section-after;

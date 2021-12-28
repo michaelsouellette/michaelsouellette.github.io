@@ -2,6 +2,7 @@ import 'zone.js/node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
+import * as  minifyHTML from 'express-minify-html';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
@@ -28,6 +29,19 @@ export function app(): express.Express {
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
+
+  server.use(minifyHTML({
+    override: true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeEmptyAttributes: true,
+        minifyJS: true
+    }
+}));
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {

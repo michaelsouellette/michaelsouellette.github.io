@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - production
+  schedule:
+    - cron:  '0 5 1 1 *'
 
 env:
   ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact

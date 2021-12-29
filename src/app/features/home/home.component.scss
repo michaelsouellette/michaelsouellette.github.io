@@ -9,11 +9,13 @@
 	color: $home-color-font;
 	display: block;
 	height: 100vh;
+	min-height: 800px;
 	position: relative;
 	width: 100%;
 
 	@media ($mobile) {
 		background-image: url('/assets/clement-h-544786-unsplash-mobile.webp');
+		min-height: 650px;
 	}
 }
 

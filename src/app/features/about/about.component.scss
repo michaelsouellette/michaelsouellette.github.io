@@ -3,7 +3,7 @@
 
 :host {
 	@include mixins.section-styles;
-	padding-top: $section-padding-vertical;
+	padding-top: 3rem;
 
 	.about {
 		display: flex;

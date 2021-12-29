@@ -11,6 +11,10 @@
 	height: 100vh;
 	position: relative;
 	width: 100%;
+
+	@media ($mobile) {
+		background-image: url('/assets/clement-h-544786-unsplash-mobile.webp');
+	}
 }
 
 .home-component {

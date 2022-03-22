@@ -34,5 +34,5 @@ jobs:
         run: npm ci
       - name: Style Lint
         run: |
-          cd app
+          cd src/app
           npm run stylelint

@@ -29,6 +29,7 @@
 				border-radius: $picture-radius;
 				display: block;
 				max-width: 100%;
+				filter: drop-shadow(3px 5px 2px rgba($grey-dark, 0.2));
 
 				@media ($mobile) {
 					margin: 0 auto;

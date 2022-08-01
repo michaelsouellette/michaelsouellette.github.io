@@ -29,7 +29,7 @@
     "@angular/router": "~13.3.0",
     "@mdi/font": "^5.9.55",
     "@nguniversal/express-engine": "^13.0.2",
-    "angular-cli-ghpages": "^1.0.0",
+    "angular-cli-ghpages": "^1.0.3",
     "express": "^4.17.3",
     "html-minifier-terser": "^7.0.0-alpha.1",
     "rxjs": "^7.5.5",

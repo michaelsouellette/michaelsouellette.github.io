@@ -1,3 +1,5 @@
+/** @format */
+
 import { RouterModule, Routes } from '@angular/router';
 
 import { AboutModule } from './features/about/about.module';
@@ -15,8 +17,7 @@ import { NoContentComponent } from './no-content/no-content.component';
 import { ResumeModule } from './features/resume/resume.module';
 import { SkillsModule } from './features/skills/skills.module';
 
-const APP_PROVIDERS = [
-];
+const APP_PROVIDERS = [];
 
 const APP_ROUTES: Routes = [
 	{ path: '', component: MainComponent },
@@ -24,18 +25,14 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		MainComponent,
-		NoContentComponent
-	],
+	declarations: [AppComponent, MainComponent, NoContentComponent],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),
 		RouterModule.forRoot(APP_ROUTES, {
-    		initialNavigation: 'enabledNonBlocking',
-    		onSameUrlNavigation: 'ignore',
-    		enableTracing: false,
-    		relativeLinkResolution: 'legacy'
+			initialNavigation: 'enabledBlocking',
+			onSameUrlNavigation: 'ignore',
+			enableTracing: false,
+			relativeLinkResolution: 'legacy'
 		}),
 		FooterModule,
 		NavigationModule,
@@ -46,8 +43,6 @@ const APP_ROUTES: Routes = [
 		SkillsModule
 	],
 	providers: APP_PROVIDERS,
-	bootstrap: [
-		AppComponent
-	]
+	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

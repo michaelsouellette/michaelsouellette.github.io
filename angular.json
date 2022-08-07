@@ -170,8 +170,7 @@
 				}
 			}
 		}
-	},
-	"defaultProject": "app",
+  },
 	"cli": {
 		"analytics": "f71cbd37-361b-47f7-9c44-d0f8be743899"
 	}

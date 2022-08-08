@@ -34,7 +34,6 @@ jobs:
       run: npm ci
     - name: Build App
       run: |
-        npm install -g @angular/cli
         npm run build:render
     - name: Archive Develop Artifact
       uses: actions/upload-artifact@master

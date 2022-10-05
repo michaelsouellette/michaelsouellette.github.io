@@ -83,10 +83,18 @@ export class ProfessionalInfo {
 	constructor() {
 		this.jobs.push(new IPosition(
 			`DICK's Sporting Goods`,
-			'10/2019',
+			'06/2021',
 			'Present',
-			'Managing the software engineers for the ECommerce UI product team; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; manage the development of an in-house marketing content management system; designing architecture around new ecommerce features spanning multiple applications.',
-			'Engineering Manager',
+			'Managing the software engineers for the Product Discovery/Top of Funnel product team; leading development of corporate design system for both Angular and React frameworks; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space.',
+			'Software Engineering Manager - Top of Funnel',
+			'https://www.dickssportinggoods.com/'
+		));
+		this.jobs.push(new IPosition(
+			`DICK's Sporting Goods`,
+			'10/2019',
+			'09/2021',
+			'Managing the software engineers for the Customer Engagement product team; managed the development of an in-house marketing content management system; design high level software architecture guides for new projects; enable cross teams collaboration in the technology space; leading development of corporate design system.',
+			'Software Engineering Manager - Customer Engagement',
 			'https://www.dickssportinggoods.com/'
 		));
 		this.jobs.push(new IPosition(

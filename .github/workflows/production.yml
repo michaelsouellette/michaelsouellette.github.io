@@ -30,7 +30,7 @@ jobs:
         key: mononode-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
     - name: NPM Install
       if: steps.npm-cache.outputs.cache-hit != 'true'
-      run: npm ci
+      run: npm ci --legacy-peer-deps
     - name: Build App
       run: |
         npm run build:render

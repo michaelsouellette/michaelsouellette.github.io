@@ -10,7 +10,7 @@ on:
 env:
   ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
   WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
-  NODE_VERSION: '14.15.x'                # set this to the node version to use
+  NODE_VERSION: '16.17.x'                # set this to the node version to use
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         key: mononode-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
     - name: NPM Install
       if: steps.npm-cache.outputs.cache-hit != 'true'
-      run: npm ci
+      run: npm ci --legacy-peer-deps
     - name: Build App
       run: |
         npm run build:render

@@ -31,7 +31,7 @@
     "@nguniversal/express-engine": "^14.2.0",
     "angular-cli-ghpages": "^1.0.3",
     "express": "^4.17.3",
-    "html-minifier-terser": "^7.0.0-alpha.1",
+    "html-minifier-terser": "^7.0.0",
     "rxjs": "^7.5.7",
     "tslib": "^2.1.0",
     "tslint-angular": "^3.0.3",

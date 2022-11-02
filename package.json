@@ -48,7 +48,7 @@
     "@types/jasmine": "~4.3.0",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^16.11.7",
-    "angular-prerender": "^10.1.8",
+    "angular-prerender": "^10.1.9",
     "codelyzer": "^6.0.2",
     "jasmine-core": "~4.4.0",
     "jasmine-spec-reporter": "~7.0.0",

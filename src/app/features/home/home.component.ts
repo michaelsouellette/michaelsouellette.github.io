@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
 			icon: 'instagram'
 		},
 		{
-			title: 'Twitter',
-			link: 'https://twitter.com/mikesouellette',
-			icon: 'twitter'
+			title: 'Mastodon',
+			link: 'https://mastodon.world/@mouellette',
+			icon: 'mastodon'
 		}
 	];
 

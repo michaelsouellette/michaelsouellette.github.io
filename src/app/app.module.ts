@@ -29,11 +29,10 @@ const APP_ROUTES: Routes = [
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),
 		RouterModule.forRoot(APP_ROUTES, {
-			initialNavigation: 'enabledBlocking',
-			onSameUrlNavigation: 'ignore',
-			enableTracing: false,
-			relativeLinkResolution: 'legacy'
-		}),
+    initialNavigation: 'enabledBlocking',
+    onSameUrlNavigation: 'ignore',
+    enableTracing: false
+}),
 		FooterModule,
 		NavigationModule,
 		AboutModule,

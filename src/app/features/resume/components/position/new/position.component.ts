@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { IPositionNew } from '../position.model';
 
@@ -6,7 +7,8 @@ import { IPositionNew } from '../position.model';
     selector: 'app-position-new',
     templateUrl: './position.component.html',
     styleUrls: ['../position.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [CommonModule]
 })
 export class PositionNewComponent implements OnInit {
 	@Input() data: IPositionNew;

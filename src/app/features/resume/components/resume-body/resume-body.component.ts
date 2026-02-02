@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
 import { IPosition, IPositionNew } from '../position/position.model';
+import { PositionComponent } from '../position/position.component';
+import { PositionNewComponent } from '../position/new/position.component';
 
 @Component({
     selector: 'app-resume-body',
@@ -11,7 +14,8 @@ import { IPosition, IPositionNew } from '../position/position.model';
         FreelanceInfo,
         ProfessionalInfo
     ],
-    standalone: false
+    standalone: true,
+    imports: [CommonModule, PositionComponent, PositionNewComponent]
 })
 export class ResumeBodyComponent implements OnInit {
 	public freelanceExperience: IPosition[] ;

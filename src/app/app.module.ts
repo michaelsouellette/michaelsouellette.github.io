@@ -25,9 +25,8 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-	declarations: [AppComponent, MainComponent, NoContentComponent],
 	imports: [
-		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		BrowserModule,
 		RouterModule.forRoot(APP_ROUTES, {
     initialNavigation: 'enabledBlocking',
     onSameUrlNavigation: 'ignore',
@@ -39,7 +38,10 @@ const APP_ROUTES: Routes = [
 		ContactModule,
 		HomeModule,
 		ResumeModule,
-		SkillsModule
+		SkillsModule,
+		AppComponent,
+		MainComponent,
+		NoContentComponent
 	],
 	providers: APP_PROVIDERS,
 	bootstrap: [AppComponent]

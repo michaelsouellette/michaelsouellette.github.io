@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { ResumeSkills } from './skills.data';
 import { IResumeSkills } from './skills.model';
@@ -8,7 +9,8 @@ import { IResumeSkills } from './skills.model';
     templateUrl: './skills.component.html',
     styleUrls: ['./skills.component.scss'],
     providers: [ResumeSkills],
-    standalone: false
+    standalone: true,
+    imports: [CommonModule]
 })
 export class SkillsComponent implements OnInit {
 	public skillsData: IResumeSkills[] ;

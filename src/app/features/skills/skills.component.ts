@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { SkillsInfo } from './skills.data';
 import { ISkill } from './skills.model';
@@ -10,7 +11,8 @@ import { ISkill } from './skills.model';
     providers: [
         SkillsInfo
     ],
-    standalone: false
+    standalone: true,
+    imports: [CommonModule]
 })
 export class SkillsComponent implements OnInit {
 	public skills: ISkill[];

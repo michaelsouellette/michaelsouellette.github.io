@@ -4,12 +4,13 @@ import { SkillsInfo } from './skills.data';
 import { ISkill } from './skills.model';
 
 @Component({
-	selector: 'app-skills',
-	templateUrl: './skills.component.html',
-	styleUrls: ['./skills.component.scss'],
-	providers: [
-		SkillsInfo
-	]
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss'],
+    providers: [
+        SkillsInfo
+    ],
+    standalone: false
 })
 export class SkillsComponent implements OnInit {
 	public skills: ISkill[];

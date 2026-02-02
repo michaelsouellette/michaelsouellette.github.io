@@ -4,10 +4,11 @@ import { ResumeSkills } from './skills.data';
 import { IResumeSkills } from './skills.model';
 
 @Component({
-	selector: 'app-skills',
-	templateUrl: './skills.component.html',
-	styleUrls: ['./skills.component.scss'],
-	providers: [ResumeSkills]
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss'],
+    providers: [ResumeSkills],
+    standalone: false
 })
 export class SkillsComponent implements OnInit {
 	public skillsData: IResumeSkills[] ;

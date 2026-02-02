@@ -3,14 +3,15 @@ import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
 import { IPosition, IPositionNew } from '../position/position.model';
 
 @Component({
-	selector: 'app-resume-body',
-	templateUrl: './resume-body.component.html',
-	styleUrls: ['./resume-body.component.scss'],
-	providers: [
-		EducationInfo,
-		FreelanceInfo,
-		ProfessionalInfo
-	]
+    selector: 'app-resume-body',
+    templateUrl: './resume-body.component.html',
+    styleUrls: ['./resume-body.component.scss'],
+    providers: [
+        EducationInfo,
+        FreelanceInfo,
+        ProfessionalInfo
+    ],
+    standalone: false
 })
 export class ResumeBodyComponent implements OnInit {
 	public freelanceExperience: IPosition[] ;

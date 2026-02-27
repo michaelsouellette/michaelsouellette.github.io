@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	standalone: false,
@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './no-content.component.html',
 	styleUrls: ['./no-content.component.scss']
 })
-export class NoContentComponent implements OnInit {
+export class NoContentComponent {
 	path = '/';
 
 	constructor() { }
-
-	ngOnInit(): void { }
 
 }

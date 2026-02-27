@@ -1,1 +1,3 @@
-<a *ngFor='let item of NAVIGATION' [href]="item.link">{{ item.title }}</a>
+@for (item of NAVIGATION; track item.link) {
+	<a [href]="item.link">{{ item.title }}</a>
+}

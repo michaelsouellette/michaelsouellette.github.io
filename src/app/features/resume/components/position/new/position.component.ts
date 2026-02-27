@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { IPositionNew } from '../position.model';
 
@@ -8,11 +8,9 @@ import { IPositionNew } from '../position.model';
 	templateUrl: './position.component.html',
 	styleUrls: ['../position.component.scss']
 })
-export class PositionNewComponent implements OnInit {
+export class PositionNewComponent {
 	@Input() data: IPositionNew;
 
 	constructor() { }
-
-	ngOnInit(): void { }
 
 }

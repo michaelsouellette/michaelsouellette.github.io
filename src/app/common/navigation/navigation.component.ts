@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	standalone: false,
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './navigation.component.html',
 	styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 	public NAVIGATION = [
 		{
 			title: 'About',
@@ -28,6 +28,5 @@ export class NavigationComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit() { }
 
 }

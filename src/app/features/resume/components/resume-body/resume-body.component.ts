@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
 import { IPosition, IPositionNew } from '../position/position.model';
 
@@ -14,15 +14,13 @@ import { IPosition, IPositionNew } from '../position/position.model';
 	]
 })
 export class ResumeBodyComponent implements OnInit {
-	public freelanceExperience: IPosition[] ;
+	public freelanceExperience: IPosition[];
 	public professionalExperience: IPositionNew[];
 	public education: IPosition[];
 
-	constructor(
-		private educationInfo: EducationInfo,
-		private freelanceInfo: FreelanceInfo,
-		private professionalInfo: ProfessionalInfo
-	) { }
+	private educationInfo = inject(EducationInfo);
+	private freelanceInfo = inject(FreelanceInfo);
+	private professionalInfo = inject(ProfessionalInfo);
 
 	ngOnInit(): void {
 		this.freelanceExperience = this.freelanceInfo.getInfo();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { SkillsInfo } from './skills.data';
 import { ISkill } from './skills.model';
@@ -15,9 +15,7 @@ import { ISkill } from './skills.model';
 export class SkillsComponent implements OnInit {
 	public skills: ISkill[];
 
-	constructor(
-		private skillsInfo: SkillsInfo
-	) { }
+	private skillsInfo = inject(SkillsInfo);
 
 	ngOnInit(): void {
 		this.skills = this.skillsInfo.getInfo();

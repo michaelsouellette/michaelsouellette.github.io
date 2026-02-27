@@ -15,17 +15,18 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-builders/custom-webpack:browser",
+					"builder": "@angular/build:application",
 					"options": {
-						"indexTransform": "src/index.transform.ts",
-						"outputPath": "dist/app/browser",
-						"index": {
-							"input": "src/index.html",
-							"output": "index.html"
+						"outputPath": {
+							"base": "dist/app"
 						},
-						"main": "src/main.ts",
-						"polyfills": "src/polyfills.ts",
+						"index": "src/index.html",
+						"browser": "src/main.ts",
 						"tsConfig": "tsconfig.app.json",
+						"server": "src/main.server.ts",
+						"ssr": {
+							"entry": "server.ts"
+						},
 						"assets": [
 							"src/favicon.ico",
 							"src/assets",
@@ -37,14 +38,18 @@
 								"output": ".well-known"
 							}
 						],
-						"styles": ["src/styles.scss", "./node_modules/@mdi/font/css/materialdesignicons.css"],
+						"styles": [
+							"src/styles.scss",
+							"./node_modules/@mdi/font/css/materialdesignicons.css"
+						],
 						"scripts": [],
-						"vendorChunk": true,
-						"extractLicenses": false,
-						"buildOptimizer": false,
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"."
+							]
+						},
 						"sourceMap": true,
-						"optimization": false,
-						"namedChunks": true
+						"optimization": false
 					},
 					"configurations": {
 						"production": {
@@ -56,15 +61,17 @@
 							],
 							"optimization": {
 								"scripts": true,
-								"fonts": { "inline": true },
-								"styles": { "minify": true, "inlineCritical": false }
+								"fonts": {
+									"inline": false
+								},
+								"styles": {
+									"minify": true,
+									"inlineCritical": false
+								}
 							},
 							"outputHashing": "all",
 							"sourceMap": false,
-							"namedChunks": false,
 							"extractLicenses": true,
-							"vendorChunk": false,
-							"buildOptimizer": true,
 							"budgets": [
 								{
 									"type": "initial",
@@ -76,105 +83,61 @@
 									"maximumWarning": "6kb"
 								}
 							]
+						},
+						"development": {
+							"optimization": false,
+							"sourceMap": true,
+							"extractLicenses": false
 						}
 					},
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"options": {
-						"browserTarget": "app:build"
+						"buildTarget": "app:build"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "app:build:production"
+							"buildTarget": "app:build:production"
+						},
+						"development": {
+							"buildTarget": "app:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "app:build"
-					}
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:unit-test",
 					"options": {
-						"main": "src/test.ts",
-						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.spec.json",
-						"karmaConfig": "karma.conf.js",
-						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles.scss"],
-						"scripts": []
+						"runner": "vitest",
+						"runnerConfig": "vitest.config.ts"
 					}
-				},
-				"e2e": {
-					"builder": "@angular-devkit/build-angular:protractor",
-					"options": {
-						"protractorConfig": "e2e/protractor.conf.js",
-						"devServerTarget": "app:serve"
-					},
-					"configurations": {
-						"production": {
-							"devServerTarget": "app:serve:production"
-						}
-					}
-				},
-				"server": {
-					"builder": "@angular-devkit/build-angular:server",
-					"options": {
-						"outputPath": "dist/app/server",
-						"main": "server.ts",
-						"tsConfig": "tsconfig.server.json",
-						"sourceMap": true,
-						"optimization": false,
-						"buildOptimizer": false
-					},
-					"configurations": {
-						"production": {
-							"outputHashing": "media",
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
-								}
-							],
-							"sourceMap": false,
-							"optimization": true,
-							"buildOptimizer": true
-						}
-					},
-					"defaultConfiguration": "production"
 				},
 				"serve-ssr": {
-					"builder": "@nguniversal/builders:ssr-dev-server",
+					"builder": "@angular-devkit/build-angular:ssr-dev-server",
 					"options": {
-						"browserTarget": "app:build",
-						"serverTarget": "app:server"
+						"buildTarget": "app:build",
+						"serverTarget": "app:build"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "app:build:production",
-							"serverTarget": "app:server:production"
+							"buildTarget": "app:build:production",
+							"serverTarget": "app:build:production"
 						}
 					}
 				},
 				"prerender": {
-					"builder": "@nguniversal/builders:prerender",
+					"builder": "@angular-devkit/build-angular:prerender",
 					"options": {
-						"routes": ["/"]
-					},
-					"configurations": {
-						"production": {
-							"browserTarget": "app:build:production",
-							"serverTarget": "app:server:production"
-						},
-						"development": {
-							"browserTarget": "app:build:development",
-							"serverTarget": "app:server:development"
-						}
+						"buildTarget": "app:build:production",
+						"routes": [
+							"/"
+						]
 					},
 					"defaultConfiguration": "production"
 				},
@@ -184,7 +147,10 @@
 				"lint": {
 					"builder": "@angular-eslint/builder:lint",
 					"options": {
-						"lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+						"lintFilePatterns": [
+							"src/**/*.ts",
+							"src/**/*.html"
+						]
 					}
 				}
 			}
@@ -192,6 +158,8 @@
 	},
 	"cli": {
 		"analytics": "f71cbd37-361b-47f7-9c44-d0f8be743899",
-		"schematicCollections": ["@angular-eslint/schematics", "@angular-eslint/schematics"]
+		"schematicCollections": [
+			"@angular-eslint/schematics"
+		]
 	}
 }

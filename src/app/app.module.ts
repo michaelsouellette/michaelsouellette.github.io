@@ -12,12 +12,12 @@ import { FooterModule } from './common/footer/footer.module';
 import { HomeModule } from './features/home/home.module';
 import { MainComponent } from './main/main.component';
 import { NavigationModule } from './common/navigation/navigation.module';
-import { NgModule } from '@angular/core';
+import { NgModule, provideZonelessChangeDetection } from '@angular/core';
 import { NoContentComponent } from './no-content/no-content.component';
 import { ResumeModule } from './features/resume/resume.module';
 import { SkillsModule } from './features/skills/skills.module';
 
-const APP_PROVIDERS = [];
+const APP_PROVIDERS = [provideZonelessChangeDetection()];
 
 const APP_ROUTES: Routes = [
 	{ path: '', component: MainComponent },
@@ -27,7 +27,7 @@ const APP_ROUTES: Routes = [
 @NgModule({
 	declarations: [AppComponent, MainComponent, NoContentComponent],
 	imports: [
-		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		BrowserModule,
 		RouterModule.forRoot(APP_ROUTES, {
     initialNavigation: 'enabledBlocking',
     onSameUrlNavigation: 'ignore',

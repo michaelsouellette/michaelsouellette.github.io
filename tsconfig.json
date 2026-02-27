@@ -8,7 +8,7 @@
 		"sourceMap": true,
 		"declaration": false,
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
@@ -23,8 +23,7 @@
 		}
 	},
 	"angularCompilerOptions": {
-		"preserveWhitespaces": false,
-		"fullTemplateTypeCheck": false
+		"preserveWhitespaces": false
 	},
 	"exclude": ["node_modules", "tmp"]
 }

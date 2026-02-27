@@ -3,6 +3,7 @@ import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
 import { IPosition, IPositionNew } from '../position/position.model';
 
 @Component({
+	standalone: false,
 	selector: 'app-resume-body',
 	templateUrl: './resume-body.component.html',
 	styleUrls: ['./resume-body.component.scss'],

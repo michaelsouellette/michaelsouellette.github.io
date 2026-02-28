@@ -27,7 +27,7 @@ export class IPositionNew {
 	public company: string;
 	public startDate: string;
 	public endDate: string;
-	public description: object;
+	public description: string[];
 	public position: string;
 	public companyLink: string;
 
@@ -35,7 +35,7 @@ export class IPositionNew {
 		company: string,
 		startDate: string,
 		endDate: string,
-		description: object,
+		description: string[],
 		position?: string,
 		companyLink?: string
 	) {

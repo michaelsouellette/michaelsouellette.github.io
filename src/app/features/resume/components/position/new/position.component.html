@@ -14,7 +14,7 @@
 @if (data.description) {
 	<div class="row__third">
 		<ul>
-			@for (item of $any(data.description); track $index) {
+			@for (item of data.description; track $index) {
 				<li>{{ item }}</li>
 			}
 		</ul>

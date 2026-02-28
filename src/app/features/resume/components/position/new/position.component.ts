@@ -1,16 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
-import { IPositionNew } from '../position.model';
+import { PositionNew } from '../position.model';
 
 @Component({
 	standalone: false,
 	selector: 'app-position-new',
 	templateUrl: './position.component.html',
-	styleUrls: ['../position.component.scss']
+	styleUrl: '../position.component.scss'
 })
 export class PositionNewComponent {
-	@Input() data: IPositionNew;
-
-	constructor() { }
-
+	data = input.required<PositionNew>();
 }

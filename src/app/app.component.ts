@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
 	standalone: false,
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+	styleUrl: './app.component.scss'
 })
 export class AppComponent { }

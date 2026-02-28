@@ -2,25 +2,18 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"baseUrl": "./",
-		"downlevelIteration": true,
 		"noUnusedLocals": true,
 		"outDir": "./dist/out-tsc",
 		"sourceMap": true,
 		"declaration": false,
 		"module": "esnext",
 		"moduleResolution": "bundler",
-		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
 		"target": "ES2022",
 		"typeRoots": ["node_modules/@types"],
 		"lib": ["ES2022", "dom"],
-		"paths": {
-			"@app/*": ["app/*"],
-			"@common/*": ["app/common/*"],
-			"@env/*": ["environments/*"],
-			"@feature/*": ["app/feature/*"]
-		}
+		"strict": true
 	},
 	"angularCompilerOptions": {
 		"preserveWhitespaces": false

@@ -4,17 +4,6 @@
 :host {
 	@include mixins.section-styles;
 
-	&::ng-deep {
-		h4 {
-			border-bottom: 1px solid $primary-color;
-			font-size: 1.3rem;
-
-			@media ($mobile) {
-				font-size: 1rem;
-			}
-		}
-	}
-
 	.resume {
 		display: flex;
 		flex-direction: row;
@@ -30,6 +19,7 @@
 
 		&__right {
 			$right-spacing: 2rem;
+
 			border-left: 1px solid $grey-light3;
 			box-sizing: border-box;
 			flex: .5;
@@ -38,6 +28,7 @@
 
 			@media ($mobile) {
 				$division-multiplier: 3;
+
 				flex: 1;
 				margin-left: calc($right-spacing / $division-multiplier);
 				padding-left: calc($right-spacing / $division-multiplier);

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 	standalone: false,
 	selector: 'app-navigation',
 	templateUrl: './navigation.component.html',
-	styleUrls: ['./navigation.component.scss']
+	styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
 	public NAVIGATION = [
@@ -25,8 +25,4 @@ export class NavigationComponent {
 			link: '#contact'
 		}
 	];
-
-	constructor() { }
-
-
 }

@@ -1,18 +1,18 @@
 <div class="row__first">
-	@if (data.companyLink) {
-		<h5><a [href]="data.companyLink" target="_blank" rel="noopener">{{ data.company }}</a></h5>
+	@if (data().companyLink) {
+		<h5><a [href]="data().companyLink" target="_blank" rel="noopener">{{ data().company }}</a></h5>
 	} @else {
-		<h5>{{ data.company }}</h5>
+		<h5>{{ data().company }}</h5>
 	}
-	<p><span>{{ data.startDate }}</span> - <span>{{ data.endDate }}</span></p>
+	<p><span>{{ data().startDate }}</span> - <span>{{ data().endDate }}</span></p>
 </div>
-@if (data.position) {
+@if (data().position) {
 	<div class="row__second">
-		<span>{{ data.position }}</span>
+		<span>{{ data().position }}</span>
 	</div>
 }
-@if (data.description) {
+@if (data().description) {
 	<div class="row__third">
-		<p>{{ data.description }}</p>
+		<p>{{ data().description }}</p>
 	</div>
 }

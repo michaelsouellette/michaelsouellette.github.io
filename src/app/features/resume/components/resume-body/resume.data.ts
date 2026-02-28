@@ -1,19 +1,19 @@
-import { IPosition, IPositionNew } from '../position/position.model';
+import { Position, PositionNew } from '../position/position.model';
 
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class EducationInfo {
-	public education: IPosition[] = [];
+	public education: Position[] = [];
 
 	constructor() {
-		this.education.push(new IPosition(
+		this.education.push(new Position(
 			'Penn State Erie, The Behrend College',
 			'2005',
 			'2009',
 			'Bachelor of Science (B.S.) in Business Management and Management Information Systems'
 		));
-		this.education.push(new IPosition(
+		this.education.push(new Position(
 			'Coudersport Jr./Sr. High School',
 			'2000',
 			'2005',
@@ -28,11 +28,11 @@ export class EducationInfo {
 
 @Injectable()
 export class FreelanceInfo {
-	public jobs: IPosition[] = [];
+	public jobs: Position[] = [];
 	private jobTitle = 'Freelance Web Developer';
 
 	constructor() {
-		this.jobs.push(new IPosition(
+		this.jobs.push(new Position(
 			`Rod's Welding`,
 			'2001',
 			'Present',
@@ -40,7 +40,7 @@ export class FreelanceInfo {
 			this.jobTitle,
 			'http://www.rodswelding.com/'
 		));
-		this.jobs.push(new IPosition(
+		this.jobs.push(new Position(
 			`Jack Brice on Wine`,
 			'2014',
 			'2015',
@@ -48,7 +48,7 @@ export class FreelanceInfo {
 			this.jobTitle,
 			'https://www.jackbricewine.com/'
 		));
-		this.jobs.push(new IPosition(
+		this.jobs.push(new Position(
 			`Off-the-Grid`,
 			'2012',
 			'2015',
@@ -56,14 +56,14 @@ export class FreelanceInfo {
 			this.jobTitle,
 			'https://off-the-grid.ws/'
 		));
-		this.jobs.push(new IPosition(
+		this.jobs.push(new Position(
 			`Pittsburgh Water Limo`,
 			'2010',
 			'2012',
 			'Designed site layout; enhanced user experience; created graphics and content to enhance site appearance; developed e-commerce solution using PayPal APIs; search engine optimization; built MySQL database for easy site maintenance; innovated back end system to manage company sales;  tracked trends and metrics in Google Analytics.',
 			this.jobTitle
 		));
-		this.jobs.push(new IPosition(
+		this.jobs.push(new Position(
 			`WineMakingTalk.com`,
 			'2010',
 			'2012',
@@ -79,10 +79,10 @@ export class FreelanceInfo {
 
 @Injectable()
 export class ProfessionalInfo {
-	public jobs: IPositionNew[] = [];
+	public jobs: PositionNew[] = [];
 
 	constructor() {
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			`DICK's Sporting Goods`,
 			'2019',
 			'Present',
@@ -98,7 +98,7 @@ export class ProfessionalInfo {
 			'Software Engineering Manager',
 			'https://www.dickssportinggoods.com/'
 		));
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			`DICK's Sporting Goods`,
 			'2018',
 			'2019',
@@ -110,7 +110,7 @@ export class ProfessionalInfo {
 			'Senior Software Engineer',
 			'https://www.dickssportinggoods.com/'
 		));
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			`DICK's Sporting Goods`,
 			'2018',
 			'2018',
@@ -122,7 +122,7 @@ export class ProfessionalInfo {
 			'Senior Front-End Web Developer',
 			'https://www.dickssportinggoods.com/'
 		));
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			'Industry Weapon',
 			'2015',
 			'2018',
@@ -136,7 +136,7 @@ export class ProfessionalInfo {
 			],
 			'Front-End Web Developer'
 		));
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			'Jawbone',
 			'2013',
 			'2015',
@@ -146,7 +146,7 @@ export class ProfessionalInfo {
 			],
 			'Web Developer'
 		));
-		this.jobs.push(new IPositionNew(
+		this.jobs.push(new PositionNew(
 			'BodyMedia',
 			'2011',
 			'2013',

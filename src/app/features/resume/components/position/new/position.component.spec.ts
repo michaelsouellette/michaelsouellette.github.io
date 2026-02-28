@@ -2,7 +2,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PositionNewComponent } from './position.component';
-import { IPositionNew } from '../position.model';
+import { PositionNew } from '../position.model';
 
 describe('PositionNewComponent', () => {
 	let component: PositionNewComponent;
@@ -19,7 +19,7 @@ describe('PositionNewComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(PositionNewComponent);
 		component = fixture.componentInstance;
-		component.data = new IPositionNew('Company', '2020', '2021', [], 'Engineer', 'https://example.com');
+		fixture.componentRef.setInput('data', new PositionNew('Company', '2020', '2021', [], 'Engineer', 'https://example.com'));
 		fixture.detectChanges();
 	});
 

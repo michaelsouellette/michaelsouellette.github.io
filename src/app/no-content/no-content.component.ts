@@ -4,11 +4,8 @@ import { Component } from '@angular/core';
 	standalone: false,
 	selector: 'app-no-content',
 	templateUrl: './no-content.component.html',
-	styleUrls: ['./no-content.component.scss']
+	styleUrl: './no-content.component.scss'
 })
 export class NoContentComponent {
 	path = '/';
-
-	constructor() { }
-
 }

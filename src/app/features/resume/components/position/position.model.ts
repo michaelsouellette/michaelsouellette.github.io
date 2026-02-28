@@ -1,10 +1,10 @@
-export class IPosition {
+export class Position {
 	public company: string;
 	public startDate: string;
 	public endDate: string;
 	public description: string;
-	public position: string;
-	public companyLink: string;
+	public position: string | undefined;
+	public companyLink: string | undefined;
 
 	constructor(
 		company: string,
@@ -23,13 +23,13 @@ export class IPosition {
 	}
 }
 
-export class IPositionNew {
+export class PositionNew {
 	public company: string;
 	public startDate: string;
 	public endDate: string;
 	public description: string[];
-	public position: string;
-	public companyLink: string;
+	public position: string | undefined;
+	public companyLink: string | undefined;
 
 	constructor(
 		company: string,

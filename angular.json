@@ -115,7 +115,8 @@
 					"options": {
 						"tsConfig": "tsconfig.spec.json",
 						"runner": "vitest",
-						"runnerConfig": "vitest.config.ts"
+						"runnerConfig": "vitest.config.ts",
+						"watch": false
 					}
 				},
 				"serve-ssr": {

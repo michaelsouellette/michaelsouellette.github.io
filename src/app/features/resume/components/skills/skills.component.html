@@ -1,6 +1,6 @@
 <h4>Skills</h4>
 <div class="skills">
-	@for (item of skillsData; track item.name; let isLast = $last) {
+	@for (item of skillsData; track item.name) {
 		<div class="skills__item">
 			<p>{{ item.name }}</p>
 			<div class="skills__stars">

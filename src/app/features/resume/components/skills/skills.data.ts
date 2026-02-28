@@ -16,7 +16,6 @@ export class ResumeSkills {
 		this.skills.push(new ResumeSkill('HTML 5', 5));
 		this.skills.push(new ResumeSkill('CSS', 5));
 		this.skills.push(new ResumeSkill('Sass', 5));
-		this.skills.push(new ResumeSkill('React', 3));
 		this.skills.push(new ResumeSkill('Javascript', 5));
 		this.skills.push(new ResumeSkill('git', 5));
 		this.skills.push(new ResumeSkill('CI/CD', 4.5));

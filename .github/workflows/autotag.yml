@@ -16,7 +16,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::v$(date +'%Y.%m.%d-%H%M%S')"
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Tag snapshot
         uses: tvdias/github-tagger@v0.0.2
         with:

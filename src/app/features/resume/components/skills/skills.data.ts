@@ -1,43 +1,42 @@
-import { IResumeSkills } from './skills.model';
+import { ResumeSkill } from './skills.model';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ResumeSkills {
-	public skills: IResumeSkills[] = [];
+	public skills: ResumeSkill[] = [];
 
 	constructor() {
-		this.skills.push(new IResumeSkills('Angular', 5));
-		this.skills.push(new IResumeSkills('TypeScript', 5));
-		this.skills.push(new IResumeSkills('React', 3.5));
-		this.skills.push(new IResumeSkills('Node.js', 4.5));
-		this.skills.push(new IResumeSkills('Express', 4));
-		this.skills.push(new IResumeSkills('MEAN', 4));
-		this.skills.push(new IResumeSkills('M*EAN', 4));
-		this.skills.push(new IResumeSkills('HTML 5', 5));
-		this.skills.push(new IResumeSkills('CSS', 5));
-		this.skills.push(new IResumeSkills('Sass', 5));
-		this.skills.push(new IResumeSkills('React', 3));
-		this.skills.push(new IResumeSkills('Javascript', 5));
-		this.skills.push(new IResumeSkills('git', 5));
-		this.skills.push(new IResumeSkills('CI/CD', 4.5));
-		this.skills.push(new IResumeSkills('Redis', 4.5));
-		this.skills.push(new IResumeSkills('SQL', 4));
-		this.skills.push(new IResumeSkills('MySQL', 4));
-		this.skills.push(new IResumeSkills('NoSQL', 4));
-		this.skills.push(new IResumeSkills('NPM', 4));
-		this.skills.push(new IResumeSkills('Bootstrap', 4.5));
-		this.skills.push(new IResumeSkills('Webpack', 3.5));
-		this.skills.push(new IResumeSkills('JSON', 5));
-		this.skills.push(new IResumeSkills('Python', 2));
-		this.skills.push(new IResumeSkills('PHP', 3));
-		this.skills.push(new IResumeSkills('jQuery', 4));
-		this.skills.push(new IResumeSkills('WordPress', 3.5));
-		this.skills.push(new IResumeSkills('Google Cloud', 3.5));
-		this.skills.push(new IResumeSkills('AWS', 3.5));
-		this.skills.push(new IResumeSkills('Azure', 4));
-		this.skills.push(new IResumeSkills('Jira', 4));
-		this.skills.push(new IResumeSkills('XML', 4));
-		this.skills.push(new IResumeSkills('PhotoShop', 2));
+		this.skills.push(new ResumeSkill('Angular', 5));
+		this.skills.push(new ResumeSkill('TypeScript', 5));
+		this.skills.push(new ResumeSkill('React', 3.5));
+		this.skills.push(new ResumeSkill('Node.js', 4.5));
+		this.skills.push(new ResumeSkill('Express', 4));
+		this.skills.push(new ResumeSkill('MEAN', 4));
+		this.skills.push(new ResumeSkill('M*EAN', 4));
+		this.skills.push(new ResumeSkill('HTML 5', 5));
+		this.skills.push(new ResumeSkill('CSS', 5));
+		this.skills.push(new ResumeSkill('Sass', 5));
+		this.skills.push(new ResumeSkill('Javascript', 5));
+		this.skills.push(new ResumeSkill('git', 5));
+		this.skills.push(new ResumeSkill('CI/CD', 4.5));
+		this.skills.push(new ResumeSkill('Redis', 4.5));
+		this.skills.push(new ResumeSkill('SQL', 4));
+		this.skills.push(new ResumeSkill('MySQL', 4));
+		this.skills.push(new ResumeSkill('NoSQL', 4));
+		this.skills.push(new ResumeSkill('NPM', 4));
+		this.skills.push(new ResumeSkill('Bootstrap', 4.5));
+		this.skills.push(new ResumeSkill('Webpack', 3.5));
+		this.skills.push(new ResumeSkill('JSON', 5));
+		this.skills.push(new ResumeSkill('Python', 2));
+		this.skills.push(new ResumeSkill('PHP', 3));
+		this.skills.push(new ResumeSkill('jQuery', 4));
+		this.skills.push(new ResumeSkill('WordPress', 3.5));
+		this.skills.push(new ResumeSkill('Google Cloud', 3.5));
+		this.skills.push(new ResumeSkill('AWS', 3.5));
+		this.skills.push(new ResumeSkill('Azure', 4));
+		this.skills.push(new ResumeSkill('Jira', 4));
+		this.skills.push(new ResumeSkill('XML', 4));
+		this.skills.push(new ResumeSkill('PhotoShop', 2));
 	}
 
 	public getInfo() {

@@ -3,7 +3,7 @@
 @forward "./palette";
 
 // Font Imports
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap';
 
 // Fonts
 $primary-font: 'Ubuntu', sans-serif;
@@ -61,7 +61,7 @@ $resume-size-font-row1: 1.2rem;
 $resume-weight-font-row1: 700;
 $resume-size-font-row2: 1.1rem;
 $resume-weight-font-row2: 400;
-$resume-size-font-row3:1rem;
+$resume-size-font-row3: 1rem;
 $resume-weight-font-row3: 500;
 
 // Contact Section

@@ -21,6 +21,7 @@
 
 .home-component {
 	$home-padding: 3rem;
+
 	padding: $home-padding 0;
 	text-align: center;
 	width: 100%;
@@ -43,7 +44,7 @@
 
 	h1,
 	h2 {
-		text-shadow: 2px 2px 5px $grey-dark;;
+		text-shadow: 2px 2px 5px $grey-dark;
 	}
 
 	.socialIcons {

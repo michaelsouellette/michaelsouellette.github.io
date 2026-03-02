@@ -1,4 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavigationComponent } from './navigation.component';
 
@@ -6,12 +7,13 @@ describe('NavigationComponent', () => {
 	let component: NavigationComponent;
 	let fixture: ComponentFixture<NavigationComponent>;
 
-	beforeEach(waitForAsync(() => {
+	beforeEach(async () => {
 		TestBed.configureTestingModule({
-			declarations: [ NavigationComponent ]
+			declarations: [ NavigationComponent ],
+			schemas: [NO_ERRORS_SCHEMA]
 		})
 		.compileComponents();
-	}));
+	});
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(NavigationComponent);

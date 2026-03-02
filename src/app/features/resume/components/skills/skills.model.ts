@@ -1,4 +1,4 @@
-export class IResumeSkills {
+export class ResumeSkill {
 	public name: string;
 	public stars: number;
 

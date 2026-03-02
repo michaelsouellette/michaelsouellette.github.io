@@ -1,7 +1,13 @@
 @use 'src/styles/variables' as *;
 
 h4 {
+	border-bottom: 1px solid $primary-color;
+	font-size: 1.3rem;
 	margin-top: 0;
+
+	@media ($mobile) {
+		font-size: 1rem;
+	}
 }
 
 .skills {

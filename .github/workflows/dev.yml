@@ -29,9 +29,7 @@ jobs:
       if: steps.npm-cache.outputs.cache-hit != 'true'
       run: npm ci --legacy-peer-deps
     - name: Build and Prerender App
-      run: |
-        npm run build:ssr
-        npm run prerender
+      run: npm run build:ssr
     - name: Archive Develop Artifact
       uses: actions/upload-artifact@v4
       with:

@@ -1,16 +1,18 @@
 <div class="home-component">
 	<img width="300" alt="Michael Ouellette" src="assets/logo.png">
 	<h1>Michael Ouellette</h1>
-	<h2>Software Engineer – Full stack web applications</h2>
+	<h2>Software Engineering Manager</h2>
+	<h3>Design Systems, Frontend Architecture &amp; Web Performance</h3>
 	<div class="socialIcons">
-		<a
-			*ngFor="let item of socialIcons"
-			class="socialIcons__icon"
-			target="_blank"
-			rel="noopener"
-			[href]="item.link"
-			[title]="item.title">
-			<span class="mdi mdi-{{ item.icon }}"></span>
-		</a>
+		@for (item of socialIcons; track item.link) {
+			<a
+				class="socialIcons__icon"
+				target="_blank"
+				rel="noopener"
+				[href]="item.link"
+				[title]="item.title">
+				<span class="mdi mdi-{{ item.icon }}"></span>
+			</a>
+		}
 	</div>
 </div>

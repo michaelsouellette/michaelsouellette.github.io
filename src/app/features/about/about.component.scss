@@ -3,6 +3,7 @@
 
 :host {
 	@include mixins.section-styles;
+
 	padding-top: 3rem;
 
 	.about {
@@ -18,6 +19,7 @@
 			display: inline-block;
 			flex: 1;
 			padding-right: 2rem;
+			padding-top: 1rem;
 			position: relative;
 
 			@media ($mobile) {

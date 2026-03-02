@@ -8,8 +8,7 @@ on:
 
 env:
   ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
-  WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
-  NODE_VERSION: '20.18.x'                # set this to the node version to use
+  NODE_VERSION: '22.x'                # set this to the node version to use
 
 jobs:
   build:
@@ -30,14 +29,15 @@ jobs:
     - name: NPM Install
       if: steps.npm-cache.outputs.cache-hit != 'true'
       run: npm ci --legacy-peer-deps
-    - name: Build App
+    - name: Build and Prerender App
       run: |
-        npm run build:render
+        npm run build:ssr
+        npm run prerender
     - name: Archive Production Artifact
       uses: actions/upload-artifact@v4
       with:
-        name:  ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-        path: ${{ env.WEBAPP_PACKAGE_PATH }}
+        name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
+        path: dist/app/browser
         include-hidden-files: true
 
   deploy:
@@ -58,4 +58,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: ./app/browser
+           publish_dir: .

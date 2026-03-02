@@ -1,4 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoContentComponent } from './no-content.component';
 
@@ -6,12 +7,13 @@ describe('NoContentComponent', () => {
 	let component: NoContentComponent;
 	let fixture: ComponentFixture<NoContentComponent>;
 
-	beforeEach(waitForAsync(() => {
+	beforeEach(async () => {
 		TestBed.configureTestingModule({
-			declarations: [ NoContentComponent ]
+			declarations: [ NoContentComponent ],
+			schemas: [NO_ERRORS_SCHEMA]
 		})
 		.compileComponents();
-	}));
+	});
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(NoContentComponent);

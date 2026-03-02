@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -33,6 +33,4 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Style Lint
-        run: |
-          cd src/app
-          npm run stylelint
+        run: npm run stylelint

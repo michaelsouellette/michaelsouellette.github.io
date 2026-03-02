@@ -9,7 +9,7 @@
 	width: $section-width;
 
 	@media ($mobile) {
-		padding:  calc($section-padding-vertical / 2.75) 0;
+		padding: calc($section-padding-vertical / 2.75) 0;
 		width: 95%;
 	}
 }

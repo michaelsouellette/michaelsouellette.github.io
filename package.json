@@ -15,7 +15,6 @@
 		"dev:ssr": "ng run app:serve-ssr",
 		"serve:ssr": "node dist/app/server/server.mjs",
 		"build:ssr": "ng build --configuration production",
-		"prerender": "ng run app:prerender",
 		"stylelint": "stylelint \"src/**/*.scss\"",
 		"format": "prettier --write ."
 	},

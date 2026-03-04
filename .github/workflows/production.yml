@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Download Artifact
         id: download
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
       - name: Display structure of downloaded files

@@ -37,11 +37,7 @@
 								"glob": "atproto-did",
 								"output": ".well-known"
 							},
-							{
-								"input": "./CNAME",
-								"glob": "CNAME",
-								"output": "."
-							}
+							"CNAME"
 						],
 						"styles": [
 							"src/styles.scss",

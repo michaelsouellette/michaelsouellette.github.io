@@ -3,7 +3,7 @@
 @forward "./palette";
 
 // Font Imports
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap';
 
 // Fonts
 $primary-font: 'Ubuntu', sans-serif;
@@ -54,14 +54,14 @@ $picture-radius: 6px;
 // Resume
 $resume-color-font: $grey-dark;
 $resume-color-font-hover: $primary-color;
-$resume-color-row1: $grey-light2;
+$resume-color-row1: $grey-dark;
 $resume-color-row2: $grey-light;
-$resume-color-row3: $grey-dark;
+$resume-color-row3: $grey-light2;
 $resume-size-font-row1: 1.2rem;
 $resume-weight-font-row1: 700;
 $resume-size-font-row2: 1.1rem;
 $resume-weight-font-row2: 400;
-$resume-size-font-row3:1rem;
+$resume-size-font-row3: 1rem;
 $resume-weight-font-row3: 500;
 
 // Contact Section

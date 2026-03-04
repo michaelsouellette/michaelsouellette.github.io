@@ -3,17 +3,17 @@
 		<p class="details__lineItem"><i class="mdi mdi-email"></i><a href="mailto:michael@ouellette.dev" rel="noopener">michael@ouellette.dev</a></p>
 		<p class="details__lineItem"><i class="mdi mdi-web"></i><a href="/">https://michael.ouellette.dev</a></p>
 		<p class="details__lineItem"><i class="mdi mdi-home"></i><span>Pittsburgh, PA</span></p>
-		<p>Dynamic and results-driven Software Engineering Manager with over 14 years of progressive professional experience in web development, team leadership, and software architecture. Demonstrates expertise in designing and implementing corporate design systems, leading cross-functional teams, and driving the development of scalable software solutions. Adept at fostering collaboration across teams, streamlining processes, and ensuring high-quality deliverables. Committed to staying at the forefront of technological advancements and continuously enhancing organizational capabilities.</p>
+		<p>Software Engineering Manager with 17+ years of experience specializing in frontend architecture, design systems, and web performance at enterprise scale. Currently leading multiple engineering teams at Dick's Sporting Goods, including the Homefield Design System — a multi-framework component library spanning React, Angular, React Native, and Web Components — and the Web Foundations team, where modernization efforts across large-scale NX monorepos have driven 32–68% bundle size reductions and significant core web vitals improvements. Experienced in building and mentoring high-performing teams, defining technical direction, and delivering infrastructure that accelerates product development across the organization.</p>
 	</section>
 	<section>
 		<h4>Professional Experience</h4>
-		<app-position-new *ngFor="let item of professionalExperience" [data]="item"></app-position-new>
-	</section>
-	<section>
-		<h4>Freelance Experience</h4>
-		<app-position *ngFor="let item of freelanceExperience" [data]="item"></app-position>
+		@for (item of professionalExperience; track item.company + item.startDate + item.position) {
+			<app-position-new [data]="item"></app-position-new>
+		}
 	</section>
 	<section>
 		<h4>Education</h4>
-		<app-position *ngFor="let item of education" [data]="item"></app-position>
+		@for (item of education; track item.company + item.startDate + item.position) {
+			<app-position [data]="item"></app-position>
+		}
 	</section>

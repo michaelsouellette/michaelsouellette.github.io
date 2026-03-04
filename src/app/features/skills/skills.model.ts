@@ -1,4 +1,4 @@
-export class ISkill {
+export class Skill {
 	public name: string;
 	public image: string;
 

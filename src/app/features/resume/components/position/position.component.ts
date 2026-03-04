@@ -1,18 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input } from '@angular/core';
 
-import { IPosition } from './position.model';
+import { Position } from './position.model';
 
 @Component({
+	standalone: false,
 	selector: 'app-position',
 	templateUrl: './position.component.html',
-	styleUrls: ['./position.component.scss']
+	styleUrl: './position.component.scss'
 })
-export class PositionComponent implements OnInit {
-	@Input() data: IPosition;
-
-	constructor() { }
-
-	ngOnInit(): void {
-	}
-
+export class PositionComponent {
+	data = input.required<Position>();
 }

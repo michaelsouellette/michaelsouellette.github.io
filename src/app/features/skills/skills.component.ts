@@ -1,25 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { SkillsInfo } from './skills.data';
-import { ISkill } from './skills.model';
+import { Skill } from './skills.model';
 
 @Component({
+	standalone: false,
 	selector: 'app-skills',
 	templateUrl: './skills.component.html',
-	styleUrls: ['./skills.component.scss'],
+	styleUrl: './skills.component.scss',
 	providers: [
 		SkillsInfo
 	]
 })
-export class SkillsComponent implements OnInit {
-	public skills: ISkill[];
-
-	constructor(
-		private skillsInfo: SkillsInfo
-	) { }
-
-	ngOnInit(): void {
-		this.skills = this.skillsInfo.getInfo();
-	}
-
+export class SkillsComponent {
+	public skills: Skill[] = inject(SkillsInfo).getInfo();
 }

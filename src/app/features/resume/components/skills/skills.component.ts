@@ -1,24 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { ResumeSkills } from './skills.data';
-import { IResumeSkills } from './skills.model';
+import { ResumeSkill } from './skills.model';
 
 @Component({
+	standalone: false,
 	selector: 'app-skills',
 	templateUrl: './skills.component.html',
-	styleUrls: ['./skills.component.scss'],
+	styleUrl: './skills.component.scss',
 	providers: [ResumeSkills]
 })
-export class SkillsComponent implements OnInit {
-	public skillsData: IResumeSkills[] ;
-
-	constructor(
-		private resumeSkills: ResumeSkills
-	) { }
-
-	ngOnInit(): void {
-		this.skillsData = this.resumeSkills.getInfo();
-	}
+export class SkillsComponent {
+	public skillsData: ResumeSkill[] = inject(ResumeSkills).getInfo();
 
 	public isDecimal(i: number) {
 		return Math.floor(i) === i;

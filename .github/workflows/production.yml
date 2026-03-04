@@ -8,8 +8,7 @@ on:
 
 env:
   ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
-  WEBAPP_PACKAGE_PATH: './dist'      # set this to the path to your web app project
-  NODE_VERSION: '20.18.x'                # set this to the node version to use
+  NODE_VERSION: '22.x'                # set this to the node version to use
 
 jobs:
   build:
@@ -23,7 +22,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: Cache Node Modules
       id: npm-cache
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: "**/node_modules"
         key: mononode-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
@@ -32,12 +31,12 @@ jobs:
       run: npm ci --legacy-peer-deps
     - name: Build App
       run: |
-        npm run build:render
+        npm run build:ssr
     - name: Archive Production Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name:  ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-        path: ${{ env.WEBAPP_PACKAGE_PATH }}
+        name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
+        path: dist/app/browser
         include-hidden-files: true
 
   deploy:
@@ -47,7 +46,7 @@ jobs:
     steps:
       - name: Download Artifact
         id: download
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
       - name: Display structure of downloaded files
@@ -58,4 +57,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: ./app/browser
+           publish_dir: .

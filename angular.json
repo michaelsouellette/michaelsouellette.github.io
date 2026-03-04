@@ -76,7 +76,8 @@
 									"type": "anyComponentStyle",
 									"maximumWarning": "6kb"
 								}
-							]
+							],
+							"prerender": true
 						},
 						"development": {
 							"optimization": false,
@@ -125,16 +126,6 @@
 							"serverTarget": "app:build:production"
 						}
 					}
-				},
-				"prerender": {
-					"builder": "@angular-devkit/build-angular:prerender",
-					"options": {
-						"buildTarget": "app:build:production",
-						"routes": [
-							"/"
-						]
-					},
-					"defaultConfiguration": "production"
 				},
 				"deploy": {
 					"builder": "angular-cli-ghpages:deploy"

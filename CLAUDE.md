@@ -145,7 +145,7 @@ Do not add empty lifecycle hooks. Only implement `ngOnInit` etc. when they conta
 
 ### TypeScript
 - `moduleResolution: "bundler"` is required (not `"node"`) for Angular 21 subpath exports
-- Strict templates are enabled for tests (`angularCompilerOptions.strictTemplates: true` in `tsconfig.spec.json`)
+- Strict templates are disabled for tests (`angularCompilerOptions.strictTemplates: false` in `tsconfig.spec.json`)
 
 ---
 

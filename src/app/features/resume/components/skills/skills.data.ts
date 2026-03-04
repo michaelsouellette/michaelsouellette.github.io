@@ -1,5 +1,5 @@
-import { ResumeSkill } from './skills.model';
 import { Injectable } from '@angular/core';
+import { ResumeSkill } from './skills.model';
 
 @Injectable()
 export class ResumeSkills {

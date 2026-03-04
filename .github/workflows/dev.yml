@@ -8,6 +8,7 @@ on:
 env:
   ARTIFACT_NAME: 'dev-michaelouellette' # set this to the name you want for the artifact
   NODE_VERSION: '22.x'                # set this to the node version to use
+  PUBLISH_DIR: './dist/app/browser'     # set this to the directory you want to publish
 
 jobs:
   build:
@@ -31,24 +32,7 @@ jobs:
     - name: Build App
       run: |
         npm run build:ssr
-    - name: Archive Develop Artifact
-      uses: actions/upload-artifact@v7
-      with:
-        name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-        path: dist/app/browser
-        include-hidden-files: true
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download Artifact
-        id: download
-        uses: actions/download-artifact@v7
-        with:
-          name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-      - name: Display structure of downloaded files
-        run: |
-            # Output artifact contents.
-            ls -Ra
+    - name: Display structure of downloaded files
+      run: |
+         # Output artifact contents.
+         ls -Ra ${{ env.PUBLISH_DIR }}

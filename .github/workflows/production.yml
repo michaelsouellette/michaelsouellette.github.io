@@ -9,6 +9,8 @@ on:
 env:
   ARTIFACT_NAME: 'prod-michaelouellette' # set this to the name you want for the artifact
   NODE_VERSION: '22.x'                # set this to the node version to use
+  PUBLISH_DIR: './dist/app/browser'     # set this to the directory you want to publish
+  PUBLISH_BRANCH: 'gh-pages'           # set this to the branch you want to
 
 jobs:
   build:
@@ -32,30 +34,13 @@ jobs:
     - name: Build App
       run: |
         npm run build:ssr
-    - name: Archive Production Artifact
-      uses: actions/upload-artifact@v7
+    - name: Display structure of downloaded files
+      run: |
+         # Output artifact contents.
+         ls -Ra ${{ env.PUBLISH_DIR }}
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-        path: ./dist
-        include-hidden-files: true
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download Artifact
-        id: download
-        uses: actions/download-artifact@v7
-        with:
-          name: ${{ env.ARTIFACT_NAME }}-${{ github.sha }}
-      - name: Display structure of downloaded files
-        run: |
-            # Output artifact contents.
-            ls -Ra
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: ./app/browser
-           publish_branch: gh-pages
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ${{ env.PUBLISH_DIR }}
+         publish_branch: ${{ env.PUBLISH_BRANCH }}

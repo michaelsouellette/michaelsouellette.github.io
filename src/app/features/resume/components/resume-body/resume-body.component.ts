@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
+import { EducationInfo, ProfessionalInfo } from './resume.data';
 
 @Component({
 	standalone: false,
@@ -8,12 +8,10 @@ import { EducationInfo, FreelanceInfo, ProfessionalInfo } from './resume.data';
 	styleUrl: './resume-body.component.scss',
 	providers: [
 		EducationInfo,
-		FreelanceInfo,
 		ProfessionalInfo
 	]
 })
 export class ResumeBodyComponent {
-	public freelanceExperience = inject(FreelanceInfo).getInfo();
 	public professionalExperience = inject(ProfessionalInfo).getInfo();
 	public education = inject(EducationInfo).getInfo();
 }

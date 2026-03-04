@@ -23,6 +23,7 @@ $navigation-padding: 1.5rem;
 	a {
 		border-bottom: 3px solid $nav-color-background;
 		color: $nav-color-font;
+		cursor: pointer;
 		display: inline-block;
 		font-size: $nav-size-font;
 		margin: 0 2rem;

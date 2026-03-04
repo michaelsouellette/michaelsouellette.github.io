@@ -43,8 +43,21 @@
 	}
 
 	h1,
-	h2 {
+	h2,
+	h3 {
 		text-shadow: 2px 2px 5px $grey-dark;
+	}
+
+	h2 {
+		margin-bottom: 0.5rem;
+		padding-bottom: 0;
+	}
+
+	h3 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 0;
+		text-transform: capitalize;
 	}
 
 	.socialIcons {
@@ -55,6 +68,7 @@
 
 		&__icon {
 			color: $home-color-font;
+			cursor: pointer;
 			display: inline-block;
 			font-size: 2rem;
 			margin: 0 .5rem;

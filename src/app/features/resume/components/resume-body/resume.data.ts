@@ -87,13 +87,13 @@ export class ProfessionalInfo {
 			'2019',
 			'Present',
 			[
-				'Leading and mentoring software engineering teams across both Search & Discovery and Customer Engagement domains, utilizing agile methodologies..',
-				'Leveraging analytics-driven insights to inform and prioritize software development initiatives, ensuring alignment with user needs and business objectives.',
-				'Spearheading the development of grassroots corporate design system for Angular and React frameworks.',
-				'Implementing A/B testing methodologies to evaluate and optimize software features, enhancing user experience and driving measurable improvements in key performance metrics.',
-				'Designing and implementing high-level software architecture guides for new initiatives.',
-				'Managed process for the creation of an in-house marketing content management system, laying foundational work for scheduled content delivery and customization.',
-				'Fostering cross-team collaboration and technology sharing initiatives to optimize project outcomes and knowledge transfer.'
+				'Architect and lead Homefield Design System from inception to production, delivering a multi-framework component library spanning React, Angular, React Native, and Web Components, adopted across internal and customer-facing applications enterprise-wide.',
+				'Lead Web Foundations team driving large-scale frontend modernization across NX monorepos, including framework upgrades, migration to Vite build tooling, and adoption of Angular hybrid SSR rendering — achieving 32–68% bundle size reductions and core web vitals improvements of 18.7% LCP and 34.2% CLS.',
+				'Lead and mentor software engineering teams across eCommerce and marketing technology, managing direct reports and driving cross-team collaboration, knowledge sharing, and delivery alignment.',
+				'Leverage agile methodologies and analytics-driven insights to prioritize development initiatives, balancing user needs with business objectives.',
+				'Implement A/B testing frameworks to evaluate feature performance and drive measurable improvements in key UX and conversion metrics.',
+				'Manage development of an in-house marketing CMS, establishing foundational architecture for scheduled content delivery and dynamic customization.',
+				'Design high-level software architecture for new initiatives, providing technical direction and scalable patterns for cross-functional teams.'
 			],
 			'Software Engineering Manager',
 			'https://www.dickssportinggoods.com/'
@@ -103,9 +103,9 @@ export class ProfessionalInfo {
 			'2018',
 			'2019',
 			[
-				'Led engineering team in developing an in-house marketing CMS, making it the site\'s most frequently called API.',
-				'Through responsive web development practices and creation of CMS, empowered content and marketing teams to respond swiftly to market changes.',
-				'Established guidelines for Angular application development and migrated significant marketing content from legacy to scalable systems.'
+				`Led engineering team in developing an in-house marketing CMS that became the site's most frequently called API, enabling content and marketing teams to respond rapidly to market changes.`,
+				'Established Angular development guidelines and standards adopted across the engineering organization.',
+				'Migrated significant marketing content from legacy systems to scalable, maintainable architecture.'
 			],
 			'Senior Software Engineer',
 			'https://www.dickssportinggoods.com/'
@@ -115,9 +115,8 @@ export class ProfessionalInfo {
 			'2018',
 			'2018',
 			[
-				'Led front-end development team in creating e-commerce marketing assets and streamlining business process.',
-				'Managed rapid content updates, collaborated with design teams on scalable content creation, and transitioned legacy applications to modern processes.',
-				'Oversaw the transition and deprecation of legacy applications, implementing newer and more efficient processes.'
+				'Led front-end development team building eCommerce marketing assets and modernizing business processes.',
+				'Managed transition and deprecation of legacy applications, replacing them with modern, scalable frontend architecture.'
 			],
 			'Senior Front-End Web Developer',
 			'https://www.dickssportinggoods.com/'
@@ -127,12 +126,10 @@ export class ProfessionalInfo {
 			'2015',
 			'2018',
 			[
-				'Influential to web application development team, introducing AngularJS, jQuery, HTML5, and Sass for interactive digital signage integrations.',
-				'Designed interactive wireframes and developed CMS web apps for digital signage management.',
-				'Built Node.js and AngularJS-based mobile apps for wayfinding, interactive touchscreen puzzles and games.',
-				'Implemented WebSocket for real-time queue management systems.',
-				'Led team strategy meetings, conducted interviews, hired, and trained developers.',
-				'Proactively troubleshot digital signage applications and developed preventive tools for future issues.'
+				'Introduced AngularJS, HTML5, and Sass to the web application development team, modernizing the tech stack for interactive digital signage integrations.',
+				'Built Node.js and AngularJS mobile apps for wayfinding, interactive touchscreen experiences, and real-time queue management via WebSocket.',
+				'Designed interactive wireframes and developed CMS web applications for digital signage management.',
+				'Led team strategy, conducted interviews, and hired and trained developers.'
 			],
 			'Front-End Web Developer'
 		));
@@ -141,8 +138,8 @@ export class ProfessionalInfo {
 			'2013',
 			'2015',
 			[
-				'Developed frontend for armband data collection using AngularJS, HTML5, Sass, and Node.js; integrated REST APIs and utilized Python with jinja templating to enhance the original application.',
-				'Led development team for UP Food and Nutrition, focusing on responsive design, rapid prototyping, and full-stack development using Python, HTML5, jQuery, and Sass.'
+				'Developed frontend for armband data collection integrating REST APIs using AngularJS, HTML5, Sass, and Node.js.',
+				'Led development team for UP Food and Nutrition app, focusing on responsive design, rapid prototyping, and full-stack development.'
 			],
 			'Web Developer'
 		));
@@ -151,10 +148,8 @@ export class ProfessionalInfo {
 			'2011',
 			'2013',
 			[
-				'Enhanced user site experience and optimized site performance and load speed.',
-				'Designed and executed website updates, focusing on e-commerce development.',
-				'Utilized JavaScript and jQuery for programming enhancements.',
-				'Developed online pages and e-commerce solutions using NetSuite software.'
+				'Optimized site performance and user experience for a health-focused eCommerce platform.',
+				'Developed eCommerce solutions and frontend enhancements using JavaScript and jQuery.'
 			],
 			'Web Developer'
 		));

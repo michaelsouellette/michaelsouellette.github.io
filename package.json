@@ -47,7 +47,7 @@
 		"@angular/language-service": "^21.2.0",
 		"@types/express": "^5.0.6",
 		"@types/html-minifier-terser": "^7.0.2",
-		"@types/node": "^25.3.3",
+		"@types/node": "^25.6.2",
 		"@typescript-eslint/eslint-plugin": "^8.56.1",
 		"@typescript-eslint/parser": "^8.56.1",
 		"angular-cli-ghpages": "^3.0.2",

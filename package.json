@@ -21,7 +21,7 @@
 	"private": true,
 	"dependencies": {
 		"@angular/common": "^21.2.0",
-		"@angular/compiler": "^21.2.0",
+		"@angular/compiler": "^21.2.14",
 		"@angular/core": "^21.2.0",
 		"@angular/platform-browser": "^21.2.0",
 		"@angular/platform-browser-dynamic": "^21.2.0",
